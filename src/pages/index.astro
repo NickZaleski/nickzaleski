@@ -107,13 +107,13 @@ const description =
 					<div class="hero__text">
 						<h1 class="hero__name">{name}</h1>
 						<p class="hero__bio hero__bio--intro">
-							Product Manager with 6+ years of experience building web apps.
+							Product Manager with 6+ years of experience building web apps
 						</p>
 						<p class="hero__bio">
 							I've launched dozens of products from scratch, working both solo and with teams of designers and developers. I love getting hands-on with tools like Cursor, Lovable, Vercel, and GitHub.
 						</p>
 						<p class="hero__bio">
-							My background is mostly in localization — a niche field that taught me a lot about solving real business problems with web tools, especially in AI Data Labeling and ABM automation. I'm currently <strong>open to new opportunities</strong>.
+							My background is mostly in localization — a niche field that taught me a lot about solving real business problems with web tools, especially in AI Data Labeling and ABM automation. I'm currently <strong>open to new opportunities</strong>, including roles outside of localization.
 						</p>
 						<p class="hero__bio hero__bio--education">
 							<strong>Location:</strong> Warsaw, Poland<br />
@@ -171,7 +171,7 @@ const description =
 							<div class="project-card__content">
 								<h3 class="project-card__title">ftns.space</h3>
 								<p class="project-card__description">
-									A simple personal journal for 30-day fitness challenges. Track your progress and build healthy habits.
+									A 30-day challenge journal with prepared 5-minute trainings for each day to help you lose belly fat.
 								</p>
 								<span class="project-card__link">
 									Visit site
@@ -183,6 +183,16 @@ const description =
 								</span>
 							</div>
 						</a>
+						<div class="project-card project-card--no-link">
+							<div class="project-card__icon">📱</div>
+							<div class="project-card__content">
+								<h3 class="project-card__title">Quiz App for iOS</h3>
+								<p class="project-card__description">
+									A native iOS quiz application. Currently in development.
+								</p>
+								<span class="project-card__status">Coming soon</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -761,6 +771,25 @@ const description =
 
 			.project-card:hover .project-card__link {
 				color: #000;
+			}
+
+			.project-card--no-link {
+				cursor: default;
+			}
+
+			.project-card--no-link:hover {
+				transform: none;
+				box-shadow: none;
+			}
+
+			.project-card__status {
+				display: inline-block;
+				font-size: 0.85rem;
+				font-weight: 500;
+				color: #666;
+				background: #f0f0f0;
+				padding: 4px 10px;
+				border-radius: 12px;
 			}
 
 			@media (max-width: 500px) {
