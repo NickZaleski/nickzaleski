@@ -1,43 +1,22 @@
-# Astro Starter Kit: Minimal
+# Nick Zaleski — Portfolio (Astro)
+
+One-page portfolio built with Astro.
+
+## Run locally
 
 ```sh
-npm create astro@latest -- --template minimal
+cd portfolio
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Astro will start at `http://localhost:4321`.
 
-## 🚀 Project Structure
+## Add your profile photo
 
-Inside of your Astro project, you'll see the following folders and files:
+- Put the attached image at `public/profile.jpg`
+- The site will automatically use it on the homepage
+- If the file is missing, it falls back to `public/profile-placeholder.svg`
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Edit content
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+All content and styling lives in `src/pages/index.astro`.

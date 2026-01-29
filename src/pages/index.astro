@@ -1,5 +1,75 @@
 ---
+const name = "Nick Zaleski";
+const currentYear = new Date().getFullYear();
 
+const PROFILE_IMG_SRC = "/profile-placeholder.png";
+
+type MusicProject = {
+	name: string;
+	descriptor: string;
+	spotifyUrl: string;
+	spotifyEmbedUrl: string;
+	streamingsUrl?: string;
+};
+
+// Order: Beside The Point, Nick Zaleski, Демпо, Henia, Carapils
+const musicProjects: MusicProject[] = [
+	{
+		name: "Beside the Point",
+		descriptor: "lo-fi beats / instrumental",
+		spotifyUrl:
+			"https://open.spotify.com/artist/6he3fk5PW3nRh5OxCSCzPo?si=rkuaN12iReiErEqOAzsLuw",
+		spotifyEmbedUrl:
+			"https://open.spotify.com/embed/artist/6he3fk5PW3nRh5OxCSCzPo?utm_source=generator&theme=0",
+		streamingsUrl: "https://song.link/s/42KuFTd7W80X6eV5qGjSlo",
+	},
+	{
+		name: "Nick Zaleski",
+		descriptor: "mixed genres / English, Russian",
+		spotifyUrl:
+			"https://open.spotify.com/artist/4CAXqMctOawFnSQbi7dMo7?si=Xmh4iJSUTW-yBUruiXKewA",
+		spotifyEmbedUrl:
+			"https://open.spotify.com/embed/artist/4CAXqMctOawFnSQbi7dMo7?utm_source=generator&theme=0",
+		streamingsUrl: "https://album.link/s/0e1gYTWY0xcQdlJdkUFf4f",
+	},
+	{
+		name: "Демпо",
+		descriptor: "punk rock / Russian",
+		spotifyUrl:
+			"https://open.spotify.com/artist/21Oxt8kNYGnBrLMefvGU0K?si=pLEbUMe-RZinM7qr2eTVyw",
+		spotifyEmbedUrl:
+			"https://open.spotify.com/embed/artist/21Oxt8kNYGnBrLMefvGU0K?utm_source=generator&theme=0",
+		streamingsUrl: "https://song.link/it/i/1567640133",
+	},
+	{
+		name: "Henia",
+		descriptor: "indie / Russian, Belarusian",
+		spotifyUrl:
+			"https://open.spotify.com/artist/256DCYA4ot2YCLTss0VgXh?si=kXCG0IaBSQ2rcks8tjL8dg",
+		spotifyEmbedUrl:
+			"https://open.spotify.com/embed/artist/256DCYA4ot2YCLTss0VgXh?utm_source=generator&theme=0",
+		streamingsUrl: "https://song.link/it/i/1849273921",
+	},
+	{
+		name: "Carapils",
+		descriptor: "punk rock / English",
+		spotifyUrl:
+			"https://open.spotify.com/artist/1SkYC4W0xZaqpEp2vAyEFu?si=QU37gLgqQaGSzqyOpdELHg",
+		spotifyEmbedUrl:
+			"https://open.spotify.com/embed/artist/1SkYC4W0xZaqpEp2vAyEFu?utm_source=generator&theme=0",
+		streamingsUrl: "https://song.link/it/i/1592775943",
+	},
+];
+
+const youtubeVideos = [
+	{ id: "89p38bhkSak", title: "Демпо - Video 1" },
+	{ id: "RAX6edXPFE4", title: "Демпо - Video 2" },
+	{ id: "q01tfRzTkJM", title: "Демпо - Video 3" },
+	{ id: "YI1_nts25A0", title: "Демпо - Video 4" },
+];
+
+const description =
+	"Product Manager with 6+ years of experience building web apps. Specialized in localization, AI Data Labeling, and ABM automation. Based in Warsaw, Poland.";
 ---
 
 <html lang="en">
@@ -8,9 +78,1001 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{name} — Portfolio</title>
+		<meta name="description" content={description} />
+		<meta property="og:title" content={`${name} — Portfolio`} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://nickzaleski.github.io/" />
+		<link rel="canonical" href="https://nickzaleski.github.io/" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<main>
+			<!-- Hero Section -->
+			<section class="hero">
+				<div class="hero__content">
+					<div class="hero__photo">
+						<img
+							src={PROFILE_IMG_SRC}
+							alt={`Photo of ${name}`}
+							loading="eager"
+						/>
+					</div>
+					<div class="hero__text">
+						<h1 class="hero__name">{name}</h1>
+						<p class="hero__bio hero__bio--intro">
+							Product Manager with 6+ years of experience building web apps.
+						</p>
+						<p class="hero__bio">
+							I've launched dozens of products from scratch, working both solo and with teams of designers and developers. I love getting hands-on with tools like Cursor, Lovable, Vercel, and GitHub.
+						</p>
+						<p class="hero__bio">
+							My background is mostly in localization — a niche field that taught me a lot about solving real business problems with web tools, especially in AI Data Labeling and ABM automation. I'm currently <strong>open to new opportunities</strong>.
+						</p>
+						<p class="hero__bio hero__bio--education">
+							<strong>Location:</strong> Warsaw, Poland<br />
+							<strong>Education:</strong> Minsk University of Management<br />
+							<strong>Certifications:</strong> Data-Driven Product Management (2022), Front-End Development (2021), Business Analysis (2020)
+						</p>
+						<div class="hero__contacts">
+							<a href="https://github.com/NickZaleski" target="_blank" rel="noreferrer" class="hero__contact-link" aria-label="GitHub">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+								</svg>
+							</a>
+							<a href="https://www.linkedin.com/in/mikalai-zaleski/" target="_blank" rel="noreferrer" class="hero__contact-link" aria-label="LinkedIn">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+									<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+								</svg>
+							</a>
+							<a href="mailto:sidfender27@gmail.com" class="hero__contact-link" aria-label="Email">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<rect width="20" height="16" x="2" y="4" rx="2"></rect>
+									<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Side Projects Section -->
+			<section class="section section--projects">
+				<div class="container">
+					<h2 class="section__title">Side Projects</h2>
+					<p class="section__subtitle">Software I've built</p>
+
+					<div class="projects-grid">
+						<a href="https://calmdown.space" target="_blank" rel="noreferrer" class="project-card">
+							<div class="project-card__icon">🧘</div>
+							<div class="project-card__content">
+								<h3 class="project-card__title">calmdown.space</h3>
+								<p class="project-card__description">
+									A productivity tool with a timer that helps reduce stress by playing different noises and frequencies. Combines sounds to help with ADHD and focus.
+								</p>
+								<span class="project-card__link">
+									Visit site
+									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+										<polyline points="15 3 21 3 21 9"></polyline>
+										<line x1="10" y1="14" x2="21" y2="3"></line>
+									</svg>
+								</span>
+							</div>
+						</a>
+						<a href="https://ftns.space" target="_blank" rel="noreferrer" class="project-card">
+							<div class="project-card__icon">💪</div>
+							<div class="project-card__content">
+								<h3 class="project-card__title">ftns.space</h3>
+								<p class="project-card__description">
+									A simple personal journal for 30-day fitness challenges. Track your progress and build healthy habits.
+								</p>
+								<span class="project-card__link">
+									Visit site
+									<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+										<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+										<polyline points="15 3 21 3 21 9"></polyline>
+										<line x1="10" y1="14" x2="21" y2="3"></line>
+									</svg>
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Music Section -->
+			<section class="section section--music">
+				<div class="container">
+					<h2 class="section__title">Music Projects</h2>
+					<p class="section__subtitle">Projects I've participated in over the years</p>
+				</div>
+
+				<div class="slider-wrapper">
+					<button class="slider-btn slider-btn--prev" aria-label="Previous project" id="prevBtn">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="m15 18-6-6 6-6"></path>
+						</svg>
+					</button>
+
+					<div class="slider" id="musicSlider">
+						<div class="slider__track" id="sliderTrack">
+							{
+								musicProjects.map((project, index) => (
+									<div class="slide" data-index={index}>
+										<div class="slide__info">
+											<h3 class="slide__name">{project.name}</h3>
+											<p class="slide__genre">{project.descriptor}</p>
+											<div class="slide__links">
+												<a
+													href={project.spotifyUrl}
+													target="_blank"
+													rel="noreferrer"
+													class="slide__link"
+												>
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="20"
+														height="20"
+														viewBox="0 0 24 24"
+														fill="currentColor"
+													>
+														<path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+													</svg>
+													Spotify
+												</a>
+												{project.streamingsUrl && (
+													<a
+														href={project.streamingsUrl}
+														target="_blank"
+														rel="noreferrer"
+														class="slide__link slide__link--secondary"
+													>
+														All platforms
+													</a>
+												)}
+											</div>
+										</div>
+										<div class="slide__embed">
+											<iframe
+												title={`${project.name} on Spotify`}
+												src={project.spotifyEmbedUrl}
+												width="100%"
+												height="352"
+												frameborder="0"
+												allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+												loading="lazy"
+											/>
+										</div>
+									</div>
+								))
+							}
+						</div>
+					</div>
+
+					<button class="slider-btn slider-btn--next" aria-label="Next project" id="nextBtn">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="m9 18 6-6-6-6"></path>
+						</svg>
+					</button>
+				</div>
+
+				<div class="slider-dots" id="sliderDots">
+					{musicProjects.map((_, index) => <button class="dot" data-index={index} aria-label={`Go to project ${index + 1}`} />)}
+				</div>
+			</section>
+
+			<!-- Videos Section -->
+			<section class="section section--videos">
+				<div class="container">
+					<h2 class="section__title">Videos</h2>
+					<p class="section__subtitle">Music videos from Демпо</p>
+
+					<div class="videos-grid">
+						{
+							youtubeVideos.map((video) => (
+								<div class="video-card">
+									<div class="video-card__ratio">
+										<iframe
+											title={video.title}
+											src={`https://www.youtube.com/embed/${video.id}`}
+											frameborder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											referrerpolicy="strict-origin-when-cross-origin"
+											allowfullscreen
+											loading="lazy"
+										/>
+									</div>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section -->
+			<section class="section section--contact">
+				<div class="container">
+					<h2 class="section__title">Get in touch</h2>
+
+					<div class="contact-links">
+						<div class="contact-item contact-item--email">
+							<div class="contact-item__icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<rect width="20" height="16" x="2" y="4" rx="2"></rect>
+									<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+								</svg>
+							</div>
+							<div class="contact-item__text">
+								<span class="contact-item__label">Email</span>
+								<div class="contact-item__email-row">
+									<a href="mailto:sidfender27@gmail.com" class="contact-item__value">sidfender27@gmail.com</a>
+									<button class="copy-btn" id="copyEmailBtn" data-email="sidfender27@gmail.com" aria-label="Copy email to clipboard">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+											<rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+											<path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+										</svg>
+										<span class="copy-btn__text">Copy</span>
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<a
+							href="https://www.linkedin.com/in/mikalai-zaleski/"
+							target="_blank"
+							rel="noreferrer"
+							class="contact-item"
+						>
+							<div class="contact-item__icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+									></path>
+									<rect width="4" height="12" x="2" y="9"></rect>
+									<circle cx="4" cy="4" r="2"></circle>
+								</svg>
+							</div>
+							<div class="contact-item__text">
+								<span class="contact-item__label">LinkedIn</span>
+							</div>
+						</a>
+
+						<div class="contact-item contact-item--static">
+							<div class="contact-item__icon">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+									></path>
+									<circle cx="12" cy="10" r="3"></circle>
+								</svg>
+							</div>
+							<div class="contact-item__text">
+								<span class="contact-item__label">Location</span>
+								<span class="contact-item__value">Warsaw, Poland</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container footer__inner">
+				<p>© <span id="footerYear">{currentYear}</span> {name}</p>
+			</div>
+		</footer>
+
+		<script is:inline>
+			(() => {
+				const year = new Date().getFullYear();
+				const footerYearEl = document.getElementById("footerYear");
+				if (footerYearEl) footerYearEl.textContent = String(year);
+
+				// Copy email functionality
+				const copyBtn = document.getElementById("copyEmailBtn");
+				if (copyBtn) {
+					copyBtn.addEventListener("click", async () => {
+						const email = copyBtn.dataset.email;
+						try {
+							await navigator.clipboard.writeText(email);
+							copyBtn.classList.add("copy-btn--copied");
+							copyBtn.querySelector(".copy-btn__text").textContent = "Copied!";
+							setTimeout(() => {
+								copyBtn.classList.remove("copy-btn--copied");
+								copyBtn.querySelector(".copy-btn__text").textContent = "Copy";
+							}, 2000);
+						} catch (err) {
+							console.error("Failed to copy:", err);
+						}
+					});
+				}
+
+				// Slider logic
+				const slider = document.getElementById("musicSlider");
+				const track = document.getElementById("sliderTrack");
+				const slides = track?.querySelectorAll(".slide");
+				const dots = document.querySelectorAll(".dot");
+				const prevBtn = document.getElementById("prevBtn");
+				const nextBtn = document.getElementById("nextBtn");
+
+				let currentIndex = 0;
+				const totalSlides = slides?.length || 0;
+
+				function updateSlider() {
+					if (!track) return;
+					const slideWidth = slides[0]?.offsetWidth || 0;
+					const gap = 24;
+					track.style.transform = `translateX(-${currentIndex * (slideWidth + gap)}px)`;
+
+					dots.forEach((dot, i) => {
+						dot.classList.toggle("dot--active", i === currentIndex);
+					});
+
+					if (prevBtn) prevBtn.disabled = currentIndex === 0;
+					if (nextBtn) nextBtn.disabled = currentIndex === totalSlides - 1;
+				}
+
+				prevBtn?.addEventListener("click", () => {
+					if (currentIndex > 0) {
+						currentIndex--;
+						updateSlider();
+					}
+				});
+
+				nextBtn?.addEventListener("click", () => {
+					if (currentIndex < totalSlides - 1) {
+						currentIndex++;
+						updateSlider();
+					}
+				});
+
+				dots.forEach((dot) => {
+					dot.addEventListener("click", () => {
+						currentIndex = parseInt(dot.dataset.index, 10);
+						updateSlider();
+					});
+				});
+
+				// Initial update
+				updateSlider();
+
+				// Update on resize
+				window.addEventListener("resize", updateSlider);
+			})();
+		</script>
+
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+				background: #ffffff;
+				color: #1a1a1a;
+				line-height: 1.6;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			.container {
+				max-width: 1100px;
+				margin: 0 auto;
+				padding: 0 24px;
+			}
+
+			.muted {
+				color: #666;
+			}
+
+			/* Hero */
+			.hero {
+				padding: 80px 24px 60px;
+				background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+			}
+
+			.hero__content {
+				max-width: 900px;
+				margin: 0 auto;
+				display: flex;
+				align-items: center;
+				gap: 48px;
+				flex-direction: row-reverse;
+			}
+
+			@media (max-width: 700px) {
+				.hero__content {
+					flex-direction: column;
+					text-align: left;
+					gap: 24px;
+				}
+
+				.hero__photo {
+					width: 200px;
+					height: 200px;
+					align-self: center;
+				}
+			}
+
+			.hero__photo {
+				flex-shrink: 0;
+				width: 360px;
+				height: 360px;
+				border-radius: 50%;
+				overflow: hidden;
+				box-shadow:
+					0 4px 6px -1px rgba(0, 0, 0, 0.1),
+					0 2px 4px -2px rgba(0, 0, 0, 0.1);
+			}
+
+			.hero__photo img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.hero__name {
+				font-size: 2.5rem;
+				font-weight: 700;
+				letter-spacing: -0.03em;
+				margin-bottom: 4px;
+				color: #111;
+			}
+
+			.hero__tagline {
+				font-size: 1rem;
+				color: #666;
+				margin-bottom: 16px;
+			}
+
+			.hero__bio {
+				font-size: 1.1rem;
+				color: #333;
+				margin-bottom: 8px;
+			}
+
+			.hero__bio a {
+				color: #111;
+				font-weight: 500;
+				border-bottom: 1px solid #ddd;
+				transition: border-color 0.2s;
+			}
+
+			.hero__bio a:hover {
+				border-color: #111;
+			}
+
+			.hero__bio--intro {
+				font-size: 1.25rem;
+				font-weight: 500;
+				color: #111;
+				margin-bottom: 16px;
+			}
+
+			.hero__bio--education {
+				font-size: 0.95rem;
+				color: #555;
+				margin-top: 16px;
+				line-height: 1.7;
+			}
+
+			.hero__bio--education strong {
+				color: #333;
+			}
+
+			.hero__bio--muted {
+				color: #666;
+				font-size: 1rem;
+			}
+
+			.hero__contacts {
+				display: flex;
+				gap: 12px;
+				margin-top: 20px;
+			}
+
+			.hero__contact-link {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 44px;
+				height: 44px;
+				background: #f5f5f5;
+				border-radius: 12px;
+				color: #333;
+				transition: background 0.2s, color 0.2s, transform 0.2s;
+			}
+
+			.hero__contact-link:hover {
+				background: #111;
+				color: #fff;
+				transform: translateY(-2px);
+			}
+
+			@media (max-width: 700px) {
+				.hero__contacts {
+					justify-content: flex-start;
+				}
+			}
+
+			/* Section */
+			.section {
+				padding: 60px 0;
+			}
+
+			.section--music {
+				background: #fafafa;
+				padding-bottom: 48px;
+			}
+
+			.section--videos {
+				background: #fff;
+			}
+
+			.section--contact {
+				background: #fafafa;
+			}
+
+			.section__title {
+				font-size: 1.5rem;
+				font-weight: 700;
+				letter-spacing: -0.02em;
+				margin-bottom: 8px;
+				color: #111;
+			}
+
+			.section__subtitle {
+				color: #666;
+				margin-bottom: 32px;
+			}
+
+			/* Projects Section */
+			.section--projects {
+				background: #fff;
+			}
+
+			.projects-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 24px;
+			}
+
+			.project-card {
+				display: flex;
+				gap: 20px;
+				background: #fafafa;
+				border-radius: 16px;
+				padding: 24px;
+				transition: transform 0.2s, box-shadow 0.2s;
+				text-decoration: none;
+				color: inherit;
+			}
+
+			.project-card:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+			}
+
+			.project-card__icon {
+				width: 56px;
+				height: 56px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #fff;
+				border-radius: 12px;
+				font-size: 1.75rem;
+				flex-shrink: 0;
+			}
+
+			.project-card__content {
+				flex: 1;
+			}
+
+			.project-card__title {
+				font-size: 1.1rem;
+				font-weight: 600;
+				margin-bottom: 8px;
+				color: #111;
+			}
+
+			.project-card__description {
+				font-size: 0.95rem;
+				color: #555;
+				margin-bottom: 12px;
+				line-height: 1.6;
+			}
+
+			.project-card__link {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				font-size: 0.9rem;
+				font-weight: 500;
+				color: #333;
+				transition: color 0.2s;
+			}
+
+			.project-card:hover .project-card__link {
+				color: #000;
+			}
+
+			@media (max-width: 500px) {
+				.project-card {
+					flex-direction: column;
+					gap: 16px;
+				}
+			}
+
+			/* Music Slider */
+			.slider-wrapper {
+				position: relative;
+				display: flex;
+				align-items: center;
+				gap: 16px;
+				padding: 0 24px;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.slider {
+				overflow: hidden;
+				flex: 1;
+			}
+
+			.slider__track {
+				display: flex;
+				gap: 24px;
+				transition: transform 0.4s ease;
+			}
+
+			.slide {
+				flex: 0 0 100%;
+				max-width: 500px;
+				background: #fff;
+				border-radius: 20px;
+				padding: 24px;
+				box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+			}
+
+			@media (min-width: 900px) {
+				.slide {
+					flex: 0 0 calc(50% - 12px);
+					max-width: none;
+				}
+			}
+
+			.slide__info {
+				margin-bottom: 20px;
+			}
+
+			.slide__name {
+				font-size: 1.25rem;
+				font-weight: 700;
+				color: #111;
+				margin-bottom: 4px;
+			}
+
+			.slide__genre {
+				font-size: 0.9rem;
+				color: #666;
+				margin-bottom: 12px;
+			}
+
+			.slide__links {
+				display: flex;
+				gap: 12px;
+				flex-wrap: wrap;
+			}
+
+			.slide__link {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				padding: 8px 14px;
+				background: #1db954;
+				color: #fff;
+				border-radius: 24px;
+				font-size: 0.85rem;
+				font-weight: 500;
+				transition: transform 0.2s, background 0.2s;
+			}
+
+			.slide__link:hover {
+				transform: translateY(-1px);
+				background: #1ed760;
+			}
+
+			.slide__link--secondary {
+				background: #f0f0f0;
+				color: #333;
+			}
+
+			.slide__link--secondary:hover {
+				background: #e5e5e5;
+			}
+
+			.slide__embed {
+				border-radius: 12px;
+				overflow: hidden;
+			}
+
+			.slide__embed iframe {
+				display: block;
+				border-radius: 12px;
+			}
+
+			.slider-btn {
+				flex-shrink: 0;
+				width: 48px;
+				height: 48px;
+				border-radius: 50%;
+				border: none;
+				background: #fff;
+				color: #333;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+				transition: transform 0.2s, box-shadow 0.2s;
+			}
+
+			.slider-btn:hover:not(:disabled) {
+				transform: scale(1.05);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+			}
+
+			.slider-btn:disabled {
+				opacity: 0.3;
+				cursor: not-allowed;
+			}
+
+			@media (max-width: 600px) {
+				.slider-btn {
+					display: none;
+				}
+				.slider-wrapper {
+					padding: 0 16px;
+				}
+			}
+
+			.slider-dots {
+				display: flex;
+				justify-content: center;
+				gap: 8px;
+				margin-top: 24px;
+			}
+
+			.dot {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				border: none;
+				background: #ddd;
+				cursor: pointer;
+				transition: background 0.2s, transform 0.2s;
+			}
+
+			.dot:hover {
+				background: #bbb;
+			}
+
+			.dot--active {
+				background: #333;
+				transform: scale(1.2);
+			}
+
+			/* Videos Grid */
+			.videos-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 24px;
+			}
+
+			@media (max-width: 700px) {
+				.videos-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			.video-card {
+				background: #fafafa;
+				border-radius: 16px;
+				overflow: hidden;
+				transition: transform 0.2s, box-shadow 0.2s;
+			}
+
+			.video-card:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+			}
+
+			.video-card__ratio {
+				position: relative;
+				padding-top: 56.25%;
+			}
+
+			.video-card__ratio iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			/* Contact */
+			.contact-links {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 16px;
+			}
+
+			@media (max-width: 800px) {
+				.contact-links {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			.contact-item {
+				display: flex;
+				align-items: center;
+				gap: 16px;
+				background: #fff;
+				padding: 20px 24px;
+				border-radius: 16px;
+				transition: transform 0.2s, box-shadow 0.2s;
+			}
+
+			.contact-item:not(.contact-item--static):hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+			}
+
+			.contact-item__icon {
+				width: 48px;
+				height: 48px;
+				background: #fafafa;
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #333;
+				flex-shrink: 0;
+			}
+
+			.contact-item__label {
+				display: block;
+				font-size: 0.85rem;
+				color: #666;
+				margin-bottom: 2px;
+			}
+
+			.contact-item__value {
+				font-weight: 500;
+				color: #111;
+			}
+
+			.contact-item__email-row {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+			}
+
+			.contact-item__email-row a {
+				color: #111;
+				text-decoration: none;
+			}
+
+			.contact-item__email-row a:hover {
+				text-decoration: underline;
+			}
+
+			.copy-btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 4px;
+				padding: 4px 8px;
+				border: none;
+				background: #f0f0f0;
+				border-radius: 6px;
+				cursor: pointer;
+				font-size: 0.75rem;
+				color: #666;
+				transition: background 0.2s, color 0.2s;
+			}
+
+			.copy-btn:hover {
+				background: #e5e5e5;
+				color: #333;
+			}
+
+			.copy-btn--copied {
+				background: #d4edda;
+				color: #155724;
+			}
+
+			.copy-btn__text {
+				font-weight: 500;
+			}
+
+			/* Footer */
+			.footer {
+				padding: 32px 0;
+				border-top: 1px solid #eee;
+			}
+
+			.footer__inner {
+				text-align: center;
+				color: #666;
+				font-size: 0.9rem;
+			}
+		</style>
 	</body>
 </html>
