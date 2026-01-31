@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# CV/Resume PDFs
+Mikalai_Zaleski_-_Product_Manager.pdf
+public/Mikalai_Zaleski_CV.pdf
