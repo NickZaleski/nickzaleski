@@ -463,7 +463,17 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 						
 						// Hobbies
 						{ text: 'HOBBIES', style: 'sectionTitle' },
-						{ text: "I played in a band and organized recordings, concerts, and video shoots. Now, I continue working on music solo, releasing lo-fi tracks — perfect for focused working. linktr.ee/besidethepoint", style: 'body' }
+						{ text: "I played in a band and organized recordings, concerts, and video shoots. Now, I continue working on music solo, releasing lo-fi tracks — perfect for focused working. linktr.ee/besidethepoint", style: 'body', margin: [0, 0, 0, 20] },
+						
+						// Download note
+						{
+							text: [
+								{ text: 'This CV was downloaded from ', style: 'downloadNote' },
+								{ text: 'nickzaleski.github.io/cv', style: 'downloadLink', link: 'https://nickzaleski.github.io/cv' },
+								{ text: '. For the most up-to-date version, please visit the link and download again.', style: 'downloadNote' }
+							],
+							margin: [0, 0, 0, 0]
+						}
 					],
 					styles: {
 						name: {
