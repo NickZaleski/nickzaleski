@@ -30,7 +30,7 @@ const experience = [
 			},
 			{
 				name: "Alconost Website, alconost.com",
-				description: `Analyzed user behavior and reviewed analytics and session recordings to find weak points where we were losing users. Organized an international marketing team to choose design references and content tailored to specific regions. This localized redesign of the company website helped increase conversions in these regions.`,
+				description: `Analyzed user behavior through analytics and session recordings to find where we were losing users. Organized an international marketing team to pick design references and content for specific regions. Managed localization workflows via Crowdin and implemented AI translation with human post-editing review. The localized redesign helped increase conversions across target regions.`,
 			},
 			{
 				name: "Alconost MT, alconost.mt",
@@ -246,13 +246,7 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 							<div class="cv__job-header">
 								<div>
 									<h3 class="cv__job-title">{job.role}</h3>
-									<p class="cv__job-company">
-										{job.company}
-										{job.companyDesc && (
-											<span class="cv__job-company-desc"> — {job.companyDesc}</span>
-										)}
-										, {job.location}
-									</p>
+									<p class="cv__job-company">{job.company}{job.companyDesc && (<span class="cv__job-company-desc"> — {job.companyDesc}</span>)}, {job.location}</p>
 								</div>
 								<span class="cv__job-period">{job.period}</span>
 							</div>
