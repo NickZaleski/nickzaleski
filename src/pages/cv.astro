@@ -130,7 +130,7 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 					</svg>
 					Back to Portfolio
 				</a>
-				<a href="/Mikalai_Zaleski_CV.pdf" download class="download-btn">
+				<button id="downloadPdfBtn" class="download-btn">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="18"
@@ -146,8 +146,8 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 						<polyline points="7 10 12 15 17 10"></polyline>
 						<line x1="12" y1="15" x2="12" y2="3"></line>
 					</svg>
-					Download PDF
-				</a>
+					<span id="downloadBtnText">Download PDF</span>
+				</button>
 			</nav>
 
 			<!-- Header -->
@@ -348,6 +348,185 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 			</div>
 		</footer>
 
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.min.js"></script>
+		<script is:inline>
+			document.getElementById('downloadPdfBtn').addEventListener('click', function() {
+				const btn = this;
+				const btnText = document.getElementById('downloadBtnText');
+				const originalText = btnText.textContent;
+				
+				// Show loading state
+				btnText.textContent = 'Generating...';
+				btn.disabled = true;
+				
+				const docDefinition = {
+					pageSize: 'A4',
+					pageMargins: [40, 40, 40, 40],
+					content: [
+						// Header
+						{ text: 'Mikalai Zaleski', style: 'name', margin: [0, 0, 0, 4] },
+						{ text: 'Product Manager', style: 'title', margin: [0, 0, 0, 12] },
+						{
+							columns: [
+								{ text: 'Warsaw, Poland', style: 'contact' },
+								{ text: 'sidfender27@gmail.com', style: 'contact' },
+								{ text: '+48 537 001 362', style: 'contact' },
+								{ text: 'linkedin.com/in/mikalai-zaleski', style: 'contact', link: 'https://www.linkedin.com/in/mikalai-zaleski' }
+							],
+							columnGap: 8,
+							margin: [0, 0, 0, 16]
+						},
+						
+						// Profile
+						{ text: 'PROFILE', style: 'sectionTitle' },
+						{ text: "I'm a data-driven Product Manager with 5+ years of experience in web applications. I work closely with design, development, and marketing teams, using data to guide decisions and improve products. I'm able to build a working prototype of the product within a few hours to validate ideas and gather early user feedback. I'm looking for new opportunities to work on new projects including roles outside of localization.", style: 'body', margin: [0, 0, 0, 12] },
+						
+						// Professional Experience
+						{ text: 'PROFESSIONAL EXPERIENCE', style: 'sectionTitle' },
+						
+						// Alconost
+						{
+							columns: [
+								{ text: 'Product Manager', style: 'jobTitle', width: '*' },
+								{ text: 'Aug 2020 — Present', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 2]
+						},
+						{ text: 'Alconost Inc. — Localization Company, Remote', style: 'company', margin: [0, 0, 0, 6] },
+						
+						{ text: 'Kraken App', style: 'projectName', margin: [0, 0, 0, 2] },
+						{ text: "Analyzed the marketing team's workflows and automated data collection and analysis from the App Store, Google Play, Steam, Nintendo, and Epic Games. Created a roadmap and backlog, built a small team (one designer and two developers), and together developed a web app that delivers insights, supports over three ABM campaigns per month, and increases lead generation.", style: 'body', margin: [0, 0, 0, 6] },
+						
+						{ text: 'multimedialabeling.com — AI Data Labeling Tool', style: 'projectName', margin: [0, 0, 0, 2] },
+						{ text: 'Built a full-stack platform to streamline AI training data collection and quality assurance. Features include multi-language audio recording, speaker qualification forms, automated quality scoring, and an admin dashboard for managing projects and submissions. Built with Lovable, Supabase, and Cursor. The tool helps scale AI data services by automating candidate screening, quality control, and multimedia dataset creation.', style: 'body', margin: [0, 0, 0, 6] },
+						
+						{ text: 'Alconost Website, alconost.com', style: 'projectName', margin: [0, 0, 0, 2] },
+						{ text: 'Analyzed user behavior through analytics and session recordings to find where we were losing users. Organized an international marketing team to pick design references and content for specific regions. Managed localization workflows via Crowdin and implemented AI translation with human post-editing review. The localized redesign helped increase conversions across target regions.', style: 'body', margin: [0, 0, 0, 6] },
+						
+						{ text: 'Alconost MT, alconost.mt', style: 'projectName', margin: [0, 0, 0, 2] },
+						{ text: "Developed alconost.mt, a web app that lets users evaluate translations using different LLMs. Built the roadmap, prioritized backlog of tasks and hypotheses, and aligned it with the CEO and CMO. Led design workshops, managed developers, and tested the product through release. After launch, improved it continuously using hypotheses, A/B and fake door tests, analytics, and customer feedback.", style: 'body', margin: [0, 0, 0, 6] },
+						
+						{ text: 'Marketing Activities', style: 'projectName', margin: [0, 0, 0, 2] },
+						{ text: 'Helped build Pikaban.com — a tool for scaling creatives and playable ads across Meta, Google, TikTok, and other ad networks. Also ran ABM campaigns for our services, which meant a lot of outreach emails and landing page experiments. Got the company ready for a gaming conference too — handled sponsorship stuff, print materials, and represented us at the event.', style: 'body', margin: [0, 0, 0, 6] },
+						
+						{ text: 'Budgeting & Unit Economics', style: 'projectName', margin: [0, 0, 0, 2] },
+						{ text: 'Worked with company executives on budgeting for products and marketing, and calculated unit economics.', style: 'body', margin: [0, 0, 0, 12] },
+						
+						// Vispaniu
+						{
+							columns: [
+								{ text: 'Business Development Manager', style: 'jobTitle', width: '*' },
+								{ text: 'Jun 2018 — Feb 2020', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 2]
+						},
+						{ text: 'Vispaniu — Travel Agency, Minsk', style: 'company', margin: [0, 0, 0, 6] },
+						{ text: 'Designed and developed a travel company website using Figma and Tilda. It allowed easy tour updates, online and offline sales, and more lead generation through web forms. This improved the sales workflow and expanded operations to new regions, growing from 7 to 80 monthly customers within a year. Also managed content creation, social media marketing, and Meta ad campaigns, and represented the company at industry conferences to negotiate better deals with hotel suppliers.', style: 'body', margin: [0, 0, 0, 12] },
+						
+						// AtTheTop
+						{
+							columns: [
+								{ text: 'Operating Officer', style: 'jobTitle', width: '*' },
+								{ text: 'Jun 2015 — Jun 2018', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 2]
+						},
+						{ text: 'AtTheTop Hostels Group, Dubai', style: 'company', margin: [0, 0, 0, 6] },
+						{ text: 'Optimized hotel operations by integrating the Cloudbeds channel management system, unifying listings across Airbnb, Booking.com, Agoda, and Expedia to reduce manual work and boost efficiency. Built a strong team by handling recruitment, interviews, and training, improving productivity and service quality. Enhanced guest experience through direct communication and personalized upsells, increasing satisfaction and repeat bookings.', style: 'body', margin: [0, 0, 0, 12] },
+						
+						// Education
+						{ text: 'EDUCATION', style: 'sectionTitle' },
+						{
+							columns: [
+								{ text: 'Minsk Innovation University', style: 'jobTitle', width: '*' },
+								{ text: 'Sep 2010 — Jun 2015', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 2]
+						},
+						{ text: 'Bachelor degree in Programming, Minsk', style: 'company', margin: [0, 0, 0, 12] },
+						
+						// Skills
+						{ text: 'SKILLS AND TOOLS', style: 'sectionTitle' },
+						{ text: 'Product Management: Agile product development, User research, Data-driven decision making, A/B and fake door tests', style: 'body', margin: [0, 0, 0, 4] },
+						{ text: 'Tools: GA4, Amplitude, Hotjar, Figma, Cursor, Antigravity, Replit, Xcode, AI prompt engineering', style: 'body', margin: [0, 0, 0, 12] },
+						
+						// Courses
+						{ text: 'COURSES', style: 'sectionTitle' },
+						{ text: 'UX/UI Design, Adukar (Dec 2019 — Feb 2020)', style: 'body', margin: [0, 0, 0, 2] },
+						{ text: 'Front-End, IT Academy (Dec 2020 — Feb 2021)', style: 'body', margin: [0, 0, 0, 2] },
+						{ text: 'Data-Driven Product Management, GoPractice Simulator (Jun 2022 — Aug 2025)', style: 'body', margin: [0, 0, 0, 12] },
+						
+						// Languages
+						{ text: 'LANGUAGES', style: 'sectionTitle' },
+						{ text: 'English (Advanced), Russian, Polish, Spanish', style: 'body', margin: [0, 0, 0, 12] },
+						
+						// Hobbies
+						{ text: 'HOBBIES', style: 'sectionTitle' },
+						{ text: "I played in a band and organized recordings, concerts, and video shoots. Now, I continue working on music solo, releasing lo-fi tracks — perfect for focused working. linktr.ee/besidethepoint", style: 'body' }
+					],
+					styles: {
+						name: {
+							fontSize: 24,
+							bold: true,
+							color: '#111111'
+						},
+						title: {
+							fontSize: 14,
+							color: '#666666'
+						},
+						contact: {
+							fontSize: 8,
+							color: '#555555'
+						},
+						sectionTitle: {
+							fontSize: 11,
+							bold: true,
+							color: '#111111',
+							margin: [0, 10, 0, 6]
+						},
+						jobTitle: {
+							fontSize: 11,
+							bold: true,
+							color: '#111111'
+						},
+						company: {
+							fontSize: 9,
+							color: '#555555'
+						},
+						period: {
+							fontSize: 8,
+							color: '#666666'
+						},
+						projectName: {
+							fontSize: 9,
+							bold: true,
+							color: '#333333'
+						},
+						body: {
+							fontSize: 9,
+							color: '#333333',
+							lineHeight: 1.4
+						}
+					},
+					defaultStyle: {
+						font: 'Roboto'
+					}
+				};
+				
+				try {
+					pdfMake.createPdf(docDefinition).download('Mikalai_Zaleski_CV.pdf');
+					btnText.textContent = originalText;
+					btn.disabled = false;
+				} catch (err) {
+					console.error('PDF generation failed:', err);
+					btnText.textContent = originalText;
+					btn.disabled = false;
+					alert('Failed to generate PDF. Please try again.');
+				}
+			});
+		</script>
+
 		<style>
 			* {
 				box-sizing: border-box;
@@ -411,15 +590,22 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 				padding: 10px 18px;
 				background: #111;
 				color: #fff;
+				border: none;
 				border-radius: 10px;
 				font-size: 0.9rem;
 				font-weight: 500;
-				transition: background 0.2s, transform 0.2s;
+				cursor: pointer;
+				transition: background 0.2s, transform 0.2s, opacity 0.2s;
 			}
 
-			.download-btn:hover {
+			.download-btn:hover:not(:disabled) {
 				background: #333;
 				transform: translateY(-2px);
+			}
+
+			.download-btn:disabled {
+				opacity: 0.7;
+				cursor: wait;
 			}
 
 			/* Header */
@@ -660,16 +846,51 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 			}
 
 			@media print {
-				.back-link {
-					display: none;
+				.cv__nav {
+					display: none !important;
 				}
 
 				.cv {
-					padding: 0;
+					padding: 0 !important;
+					max-width: 100% !important;
+				}
+
+				.cv__header {
+					margin-bottom: 24px !important;
+					padding-bottom: 16px !important;
+				}
+
+				.cv__section {
+					margin-bottom: 20px !important;
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__job {
+					margin-bottom: 16px !important;
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__project {
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__section-title {
+					margin-bottom: 10px !important;
+					padding-bottom: 6px !important;
+					page-break-after: avoid;
+					break-after: avoid;
+				}
+
+				.cv__text {
+					font-size: 0.9rem !important;
+					line-height: 1.5 !important;
 				}
 
 				.footer {
-					display: none;
+					display: none !important;
 				}
 			}
 		</style>
