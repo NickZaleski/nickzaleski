@@ -1,0 +1,1121 @@
+---
+const name = "Mikalai Zaleski";
+const title = "Product Manager";
+const currentYear = new Date().getFullYear();
+
+const contactInfo = {
+	location: "Warsaw, Poland (EU Citizen — open to relocate to Barcelona)",
+	email: "sidfender27@gmail.com",
+	phone: "+48 537 001 362",
+	linkedin: "https://www.linkedin.com/in/mikalai-zaleski",
+};
+
+const profile = `Product Manager with 5+ years of experience shipping consumer-facing and B2B products end-to-end — from discovery and user research through delivery, launch, and adoption. I've built mobile-ready apps, analytics tools, and AI-powered platforms from scratch in fast-paced, remote-first environments. Deeply curious and hands-on with AI tools — I use Cursor, GPT, and AI-driven workflows daily both in my PM work and in side projects I build and ship myself. Strong analytical skills with data-driven decision-making at every step. Entrepreneurial mindset — I thrive where product culture is still being defined and processes are being built alongside the product. EU citizen, ready to work remotely or relocate to Barcelona. Available for B2B or direct hire.`;
+
+const motivation = `Joko is building something I care about as a user — smarter shopping that actually saves money and time. The AI-powered shopping assistant is especially exciting: it's the kind of product where deep technical innovation meets real consumer value, and that intersection is where I do my best work. I'm drawn to Joko's stage — profitable in core market, scaling globally, still early enough that product culture and team processes are being shaped. That's exactly the environment where I contribute most: I don't just execute a roadmap, I help define how product gets done. I bring 5+ years of end-to-end product ownership, hands-on AI fluency, consumer product experience, and an entrepreneurial mindset. I've lived in three countries, I speak four languages, and as an EU citizen I'm ready to join from Barcelona or work remotely — whichever serves the team best.`;
+
+const experience = [
+	{
+		role: "Product Manager",
+		company: "Alconost Inc.",
+		companyDesc: "Tech / Localization",
+		location: "Remote",
+		period: "Aug 2020 — Present",
+		projects: [
+			{
+				name: "AI Data Labeling Platform — multimedialabeling.com",
+				description: `Owned the full product lifecycle end-to-end for a consumer-grade B2B platform: discovery (user interviews, competitor analysis), delivery (specs, Scrum with engineering + design), and adoption (metrics, iteration). Built AI-powered quality scoring features, role-based dashboards, and a polished onboarding experience. Wrote detailed specifications, tested meticulously, and monitored success post-launch. This project shaped my attention to detail and my approach to turning complex technical capabilities into simple, delightful user experiences.`,
+			},
+			{
+				name: "Kraken App — Analytics & Market Intelligence",
+				description: `Led a cross-functional team (designer + 2 engineers) to build a consumer-facing analytics tool collecting data from App Store, Google Play, Steam, and more. Defined the product vision, created the roadmap, prioritized based on business impact, and owned the full feature lifecycle from discovery to launch. Stayed on top of competitor insights and user feedback to drive continuous improvement. The tool now powers 3+ campaigns monthly.`,
+			},
+			{
+				name: "Pikaban.com — Cross-Platform Creative Scaling",
+				description: `Drove product execution for a cross-platform tool (web + mobile-ready) integrating with Meta, Google, and TikTok. Collaborated with marketing on positioning, messaging, and go-to-market for new features. Iterated rapidly based on user feedback and performance data. Managed the full feature lifecycle from spec to launch to monitoring.`,
+			},
+			{
+				name: "Website Optimization & Conversion Growth",
+				description: `Led data-driven product improvements using GA4, Amplitude, and session recordings. Designed A/B tests, defined success metrics, and translated analytics into product decisions. Strong problem-solving approach: identified conversion bottlenecks, proposed solutions, tested them, and measured impact. Collaborated cross-functionally to communicate findings and align stakeholders.`,
+			},
+		],
+	},
+	{
+		role: "Business Development Manager",
+		company: "Vispaniu",
+		companyDesc: "Travel Agency (Startup)",
+		location: "Minsk",
+		period: "Jun 2018 — Feb 2020",
+		description: `Consumer-facing product experience in a startup environment. Managed the full product and growth stack: website, content, social media, and ad campaigns. Grew operations from 7 to 80 monthly customers within a year by running experiments, gathering user feedback, and iterating fast. Entrepreneurial environment where processes didn't exist — I built them. Represented the company at industry conferences and managed cross-functional collaboration.`,
+	},
+	{
+		role: "Operating Officer",
+		company: "AtTheTop Hostels Group",
+		location: "Dubai",
+		period: "Jun 2015 — Jun 2018",
+		description: `Consumer-facing operations across multiple platforms (Airbnb, Booking.com, Agoda, Expedia). Managed platform integrations, built operational dashboards, and coordinated a multi-cultural team. Developed attention to detail and the ability to spot and fix potential issues early. Experience working in a fast-paced, international environment with direct consumer feedback loops.`,
+	},
+];
+
+const education = {
+	institution: "Minsk Innovation University",
+	location: "Minsk",
+	degree: "Bachelor degree in Programming",
+	period: "Sep 2010 — Jun 2015",
+};
+
+const skills = {
+	productManagement: [
+		"End-to-end product ownership (discovery → delivery → adoption)",
+		"Feature lifecycle management (spec → design → build → test → launch → monitor)",
+		"Roadmap & prioritization based on business impact",
+		"User research & customer interviews",
+		"A/B testing & data-driven experimentation",
+		"Cross-functional communication (Engineering, Design, Business)",
+		"Scrum / Agile workflows",
+	],
+	tools: ["JIRA", "Notion", "Figma", "GA4", "Amplitude", "Hotjar", "Cursor (AI)", "GitHub", "Vercel", "Supabase", "Stripe"],
+	bonusExposure: ["AI tools & AI-powered product features", "Consumer mobile apps", "International / multi-market products", "Startup product culture building"],
+};
+
+const courses = [
+	{
+		name: "Data-Driven Product Management",
+		provider: "GoPractice Simulator",
+		period: "Jun 2022 — Aug 2025",
+	},
+	{ name: "Front-End Development", provider: "IT Academy", period: "Dec 2020 — Feb 2021" },
+	{ name: "UX/UI Design", provider: "Adukar", period: "Dec 2019 — Feb 2020" },
+];
+
+const languages = ["English (Advanced)", "Russian (Native)", "Polish (Intermediate)", "Spanish (Basic)"];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{name} — {title} CV | Joko</title>
+		<meta
+			name="description"
+			content={`${name} - ${title}. ${profile.slice(0, 150)}...`}
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main class="cv">
+			<nav class="cv__nav">
+				<a href="/" class="back-link">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="m15 18-6-6 6-6"></path>
+					</svg>
+					Back to Portfolio
+				</a>
+				<button id="downloadPdfBtn" class="download-btn">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+						<polyline points="7 10 12 15 17 10"></polyline>
+						<line x1="12" y1="15" x2="12" y2="3"></line>
+					</svg>
+					<span id="downloadBtnText">Download PDF</span>
+				</button>
+			</nav>
+
+			<!-- Company Target Badge -->
+			<div class="cv__target-company">
+				<img src="/joko.png" alt="Joko" class="cv__company-logo" />
+				<span>Application for Product Manager — Joko</span>
+			</div>
+
+			<!-- Availability Notice -->
+			<div class="cv__availability">
+				<p><strong>EU citizen</strong> — ready to relocate to Barcelona or work fully remote. Available for <strong>B2B contract or direct hire</strong>.</p>
+			</div>
+
+			<!-- Header -->
+			<header class="cv__header">
+				<img src="/photo.png" alt={name} class="cv__photo" />
+				<h1 class="cv__name">{name}</h1>
+				<p class="cv__title">{title}</p>
+				<div class="cv__contact">
+					<span class="cv__contact-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path
+								d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+							></path>
+							<circle cx="12" cy="10" r="3"></circle>
+						</svg>
+						{contactInfo.location}
+					</span>
+					<a href={`mailto:${contactInfo.email}`} class="cv__contact-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<rect width="20" height="16" x="2" y="4" rx="2"></rect>
+							<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+						</svg>
+						{contactInfo.email}
+					</a>
+					<a href={`tel:${contactInfo.phone.replace(/\s/g, "")}`} class="cv__contact-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path
+								d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+							></path>
+						</svg>
+						{contactInfo.phone}
+					</a>
+					<a
+						href={contactInfo.linkedin}
+						target="_blank"
+						rel="noreferrer"
+						class="cv__contact-item"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+						>
+							<path
+								d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+							></path>
+						</svg>
+						LinkedIn
+					</a>
+				</div>
+			</header>
+
+			<!-- Profile -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Profile</h2>
+				<p class="cv__text">{profile}</p>
+			</section>
+
+			<!-- Motivation -->
+			<section class="cv__section cv__motivation">
+				<h2 class="cv__section-title">Why Joko</h2>
+				<p class="cv__text">{motivation}</p>
+			</section>
+
+			<!-- How I Match the Role -->
+			<section class="cv__section cv__match">
+				<h2 class="cv__section-title">How I Match the Role</h2>
+				<div class="cv__match-grid">
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">2+ years PM experience on consumer-facing products</h4>
+						<p class="cv__text">5+ years building consumer-facing and B2B products end-to-end. I've shipped platforms, analytics tools, and growth features used by thousands.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Tech and AI fluency</h4>
+						<p class="cv__text">I use Cursor, GPT, and AI-powered workflows daily. I build and ship my own side projects with AI tools. I discuss APIs and technical constraints with engineers fluently.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Analytical skills & data-driven decisions</h4>
+						<p class="cv__text">I design A/B tests, define success metrics, and use GA4, Amplitude, and session recordings to make every product decision backed by data.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Entrepreneurial mindset, thrives on challenges</h4>
+						<p class="cv__text">Every product I've built started from zero — no playbooks, no existing processes. I define the product culture and ways of working alongside shipping features.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">End-to-end ownership & Scrum experience</h4>
+						<p class="cv__text">Full lifecycle: discovery, specs, Scrum delivery with eng + design, testing, launch, and post-launch monitoring. I own outcomes, not just tasks.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Location & languages</h4>
+						<p class="cv__text">EU citizen based in Warsaw. Ready to relocate to Barcelona or work fully remote. Fluent English, plus Russian, Polish, and basic Spanish.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Experience -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Professional Experience</h2>
+				{
+					experience.map((job) => (
+						<div class="cv__job">
+							<div class="cv__job-header">
+								<div>
+									<h3 class="cv__job-title">{job.role}</h3>
+									<p class="cv__job-company">{job.company}{job.companyDesc && (<span class="cv__job-company-desc"> — {job.companyDesc}</span>)}, {job.location}</p>
+								</div>
+								<span class="cv__job-period">{job.period}</span>
+							</div>
+							{job.projects ? (
+								<div class="cv__projects">
+									{job.projects.map((project) => (
+										<div class="cv__project">
+											<h4 class="cv__project-name">{project.name}</h4>
+											<p class="cv__text">{project.description}</p>
+										</div>
+									))}
+								</div>
+							) : (
+								<p class="cv__text">{job.description}</p>
+							)}
+						</div>
+					))
+				}
+			</section>
+
+			<!-- Side Projects -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Side Projects (AI & Consumer)</h2>
+				<p class="cv__text" style="margin-bottom: 12px;">
+					I actively build and ship consumer-facing products using AI tools — demonstrating hands-on tech and AI fluency:
+				</p>
+				<div class="cv__projects">
+					<div class="cv__project">
+						<h4 class="cv__project-name">calmdown.space</h4>
+						<p class="cv__text">A productivity tool with ambient sounds for focus — built with Cursor AI, deployed on Vercel. Combines sound design with timer functionality.</p>
+					</div>
+					<div class="cv__project">
+						<h4 class="cv__project-name">ftns.space</h4>
+						<p class="cv__text">A 30-day fitness challenge journal — consumer mobile-ready app with daily structured content and progress tracking.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Education -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Education</h2>
+				<div class="cv__job">
+					<div class="cv__job-header">
+						<div>
+							<h3 class="cv__job-title">{education.institution}</h3>
+							<p class="cv__job-company">{education.degree}, {education.location}</p>
+						</div>
+						<span class="cv__job-period">{education.period}</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Skills -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Skills and Tools</h2>
+				<div class="cv__skills">
+					<div class="cv__skill-group">
+						<h4 class="cv__skill-label">Product Management</h4>
+						<div class="cv__skill-tags">
+							{skills.productManagement.map((skill) => <span class="cv__tag">{skill}</span>)}
+						</div>
+					</div>
+					<div class="cv__skill-group">
+						<h4 class="cv__skill-label">Tools</h4>
+						<div class="cv__skill-tags">
+							{skills.tools.map((tool) => <span class="cv__tag">{tool}</span>)}
+						</div>
+					</div>
+					<div class="cv__skill-group">
+						<h4 class="cv__skill-label">Nice-to-Have Experience</h4>
+						<div class="cv__skill-tags">
+							{skills.bonusExposure.map((item) => <span class="cv__tag cv__tag--highlight">{item}</span>)}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Courses -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Courses</h2>
+				<div class="cv__courses">
+					{
+						courses.map((course) => (
+							<div class="cv__course">
+								<div class="cv__course-info">
+									<h4 class="cv__course-name">{course.name}</h4>
+									<p class="cv__course-provider">{course.provider}</p>
+								</div>
+								<span class="cv__course-period">{course.period}</span>
+							</div>
+						))
+					}
+				</div>
+			</section>
+
+			<!-- Languages -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Languages</h2>
+				<div class="cv__skill-tags">
+					{languages.map((lang) => <span class="cv__tag">{lang}</span>)}
+				</div>
+			</section>
+
+			<!-- Hobbies -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Hobbies</h2>
+				<p class="cv__text">
+					I played in a band and organized recordings, concerts, and video shoots. Now, I
+					continue working on music solo, releasing lo-fi tracks — perfect for focused working.
+					<a
+						href="https://linktr.ee/besidethepoint"
+						target="_blank"
+						rel="noreferrer"
+						class="cv__link">linktr.ee/besidethepoint</a
+					>
+				</p>
+			</section>
+
+			<!-- GDPR Consent -->
+			<footer class="cv__gdpr">
+				<p>I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).</p>
+			</footer>
+		</main>
+
+		<footer class="footer">
+			<div class="container footer__inner">
+				<p>© <span id="footerYear">{currentYear}</span> {name}</p>
+			</div>
+		</footer>
+
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.min.js"></script>
+		<script is:inline>
+			document.getElementById('downloadPdfBtn').addEventListener('click', function() {
+				const btn = this;
+				const btnText = document.getElementById('downloadBtnText');
+				const originalText = btnText.textContent;
+				
+				btnText.textContent = 'Generating...';
+				btn.disabled = true;
+				
+				const docDefinition = {
+					pageSize: 'A4',
+					pageMargins: [24, 24, 24, 24],
+					content: [
+						{ text: 'Mikalai Zaleski', style: 'name', margin: [0, 0, 0, 2] },
+						{ text: 'Product Manager', style: 'title', margin: [0, 0, 0, 4] },
+						{ text: 'EU citizen — ready to relocate to Barcelona or work fully remote. Available for B2B or direct hire.', style: 'highlight', margin: [0, 0, 0, 6] },
+						{
+							columns: [
+								{ text: 'Warsaw, Poland', style: 'contact' },
+								{ text: 'sidfender27@gmail.com', style: 'contact' },
+								{ text: '+48 537 001 362', style: 'contact' },
+								{ text: 'linkedin.com/in/mikalai-zaleski', style: 'contact', link: 'https://www.linkedin.com/in/mikalai-zaleski' }
+							],
+							columnGap: 6,
+							margin: [0, 0, 0, 10]
+						},
+						
+						{ text: 'PROFILE', style: 'sectionTitle' },
+						{ text: "Product Manager with 5+ years of experience shipping consumer-facing and B2B products end-to-end. Deeply curious and hands-on with AI tools — I use Cursor, GPT, and AI-driven workflows daily. Strong analytical skills with data-driven decision-making. Entrepreneurial mindset — I thrive where product culture is still being defined.", style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'WHY JOKO', style: 'sectionTitle' },
+						{ text: "Joko is building smarter shopping — the AI-powered assistant is where deep technical innovation meets real consumer value. I'm drawn to Joko's stage: profitable, scaling globally, still defining product culture. I bring end-to-end ownership, AI fluency, consumer product experience, and an entrepreneurial mindset. EU citizen, ready for Barcelona or remote.", style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'PROFESSIONAL EXPERIENCE', style: 'sectionTitle' },
+						
+						{
+							columns: [
+								{ text: 'Product Manager', style: 'jobTitle', width: '*' },
+								{ text: 'Aug 2020 — Present', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 1]
+						},
+						{ text: 'Alconost Inc. — Tech / Localization, Remote', style: 'company', margin: [0, 0, 0, 4] },
+						
+						{ text: 'AI Data Labeling Platform — multimedialabeling.com', style: 'projectName', margin: [0, 0, 0, 1] },
+						{ text: "Owned full lifecycle: discovery (user interviews), delivery (specs, Scrum with eng + design), adoption (metrics, A/B tests). Built AI-powered quality scoring, dashboards, and polished onboarding. Meticulous testing and post-launch monitoring.", style: 'body', margin: [0, 0, 0, 4] },
+						
+						{ text: 'Kraken App — Analytics & Market Intelligence', style: 'projectName', margin: [0, 0, 0, 1] },
+						{ text: 'Led cross-functional team to build consumer-facing analytics tool. Defined vision, roadmap, and prioritization. Owned feature lifecycle from discovery to launch. Tracked competitor insights and user feedback. Powers 3+ campaigns monthly.', style: 'body', margin: [0, 0, 0, 4] },
+						
+						{ text: 'Pikaban.com — Cross-Platform Creative Scaling', style: 'projectName', margin: [0, 0, 0, 1] },
+						{ text: 'Cross-platform tool (web + mobile-ready) integrating with Meta, Google, TikTok. Collaborated with marketing on positioning and go-to-market. Rapid iteration based on user feedback.', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{
+							columns: [
+								{ text: 'Business Development Manager', style: 'jobTitle', width: '*' },
+								{ text: 'Jun 2018 — Feb 2020', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 1]
+						},
+						{ text: 'Vispaniu — Travel Agency (Startup), Minsk', style: 'company', margin: [0, 0, 0, 4] },
+						{ text: 'Consumer-facing startup. Grew from 7 to 80 monthly customers in a year. Built processes from scratch in an entrepreneurial environment.', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{
+							columns: [
+								{ text: 'Operating Officer', style: 'jobTitle', width: '*' },
+								{ text: 'Jun 2015 — Jun 2018', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 1]
+						},
+						{ text: 'AtTheTop Hostels Group, Dubai', style: 'company', margin: [0, 0, 0, 4] },
+						{ text: 'Consumer-facing operations across Airbnb, Booking.com, Agoda, Expedia. Platform integrations, operational dashboards, multi-cultural team coordination.', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'SIDE PROJECTS (AI & CONSUMER)', style: 'sectionTitle' },
+						{ text: 'calmdown.space — Productivity tool with ambient sounds, built with Cursor AI. ftns.space — 30-day fitness challenge journal, consumer mobile-ready app.', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'EDUCATION', style: 'sectionTitle' },
+						{
+							columns: [
+								{ text: 'Minsk Innovation University', style: 'jobTitle', width: '*' },
+								{ text: 'Sep 2010 — Jun 2015', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 1]
+						},
+						{ text: 'Bachelor degree in Programming, Minsk', style: 'company', margin: [0, 0, 0, 8] },
+						
+						{ text: 'SKILLS AND TOOLS', style: 'sectionTitle' },
+						{ text: 'Product: End-to-end ownership, Feature lifecycle, Roadmap & prioritization, User research, A/B testing, Cross-functional communication, Scrum', style: 'body', margin: [0, 0, 0, 2] },
+						{ text: 'Tools: JIRA, Notion, Figma, GA4, Amplitude, Hotjar, Cursor (AI), GitHub, Vercel, Supabase, Stripe', style: 'body', margin: [0, 0, 0, 2] },
+						{ text: 'Nice-to-Have: AI tools & AI-powered features, Consumer mobile apps, International products, Startup culture building', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'LANGUAGES', style: 'sectionTitle' },
+						{ text: 'English (Advanced), Russian (Native), Polish (Intermediate), Spanish (Basic)', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).', style: 'gdpr', margin: [0, 8, 0, 0] }
+					],
+				styles: {
+					name: {
+						fontSize: 20,
+						bold: true,
+						color: '#111111'
+					},
+					title: {
+						fontSize: 11,
+						color: '#666666'
+					},
+					highlight: {
+						fontSize: 8,
+						bold: true,
+						color: '#0369a1'
+					},
+					contact: {
+						fontSize: 7,
+						color: '#555555'
+					},
+					sectionTitle: {
+						fontSize: 9,
+						bold: true,
+						color: '#111111',
+						margin: [0, 6, 0, 4]
+					},
+					jobTitle: {
+						fontSize: 9,
+						bold: true,
+						color: '#111111'
+					},
+					company: {
+						fontSize: 8,
+						color: '#555555'
+					},
+					period: {
+						fontSize: 7,
+						color: '#666666'
+					},
+					projectName: {
+						fontSize: 8,
+						bold: true,
+						color: '#333333'
+					},
+					body: {
+						fontSize: 8,
+						color: '#333333',
+						lineHeight: 1.2
+					},
+					gdpr: {
+						fontSize: 6,
+						color: '#888888',
+						italics: true,
+						lineHeight: 1.3
+					}
+				},
+					defaultStyle: {
+						font: 'Roboto'
+					}
+				};
+				
+				try {
+					pdfMake.createPdf(docDefinition).download('Mikalai_Zaleski_PM_CV_Joko.pdf');
+					btnText.textContent = originalText;
+					btn.disabled = false;
+				} catch (err) {
+					console.error('PDF generation failed:', err);
+					btnText.textContent = originalText;
+					btn.disabled = false;
+					alert('Failed to generate PDF. Please try again.');
+				}
+			});
+		</script>
+
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				font-family:
+					"Inter",
+					-apple-system,
+					BlinkMacSystemFont,
+					"Segoe UI",
+					Roboto,
+					sans-serif;
+				background: #ffffff;
+				color: #1a1a1a;
+				line-height: 1.6;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			.cv {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 40px 24px 60px;
+			}
+
+			.cv__nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 24px;
+			}
+
+			.back-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				font-size: 0.9rem;
+				color: #666;
+				transition: color 0.2s;
+			}
+
+			.back-link:hover {
+				color: #111;
+			}
+
+			.download-btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				padding: 10px 18px;
+				background: #111;
+				color: #fff;
+				border: none;
+				border-radius: 10px;
+				font-size: 0.9rem;
+				font-weight: 500;
+				cursor: pointer;
+				transition: background 0.2s, transform 0.2s, opacity 0.2s;
+			}
+
+			.download-btn:hover:not(:disabled) {
+				background: #333;
+				transform: translateY(-2px);
+			}
+
+			.download-btn:disabled {
+				opacity: 0.7;
+				cursor: wait;
+			}
+
+			/* Target Company Badge */
+			.cv__target-company {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 12px;
+				padding: 16px 24px;
+				background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+				border-radius: 12px;
+				margin-bottom: 12px;
+				border: 1px solid #dee2e6;
+			}
+
+			.cv__company-logo {
+				height: 32px;
+				width: auto;
+			}
+
+			.cv__target-company span {
+				font-size: 1rem;
+				font-weight: 500;
+				color: #495057;
+			}
+
+			/* Availability Notice */
+			.cv__availability {
+				text-align: center;
+				padding: 12px 24px;
+				background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+				border-radius: 10px;
+				margin-bottom: 32px;
+				border: 1px solid #fde68a;
+			}
+
+			.cv__availability p {
+				font-size: 0.9rem;
+				color: #92400e;
+				margin: 0;
+			}
+
+			/* Header */
+			.cv__header {
+				text-align: center;
+				margin-bottom: 48px;
+				padding-bottom: 32px;
+				border-bottom: 1px solid #eee;
+			}
+
+			.cv__photo {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				object-fit: cover;
+				margin-bottom: 16px;
+				border: 3px solid #f0f0f0;
+			}
+
+			.cv__name {
+				font-size: 2.5rem;
+				font-weight: 700;
+				letter-spacing: -0.03em;
+				color: #111;
+				margin-bottom: 4px;
+			}
+
+			.cv__title {
+				font-size: 1.25rem;
+				color: #666;
+				margin-bottom: 20px;
+			}
+
+			.cv__contact {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 16px 24px;
+			}
+
+			.cv__contact-item {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				font-size: 0.9rem;
+				color: #555;
+				transition: color 0.2s;
+			}
+
+			a.cv__contact-item:hover {
+				color: #111;
+			}
+
+			/* Sections */
+			.cv__section {
+				margin-bottom: 36px;
+			}
+
+			.cv__section-title {
+				font-size: 1.1rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				color: #111;
+				margin-bottom: 16px;
+				padding-bottom: 8px;
+				border-bottom: 2px solid #111;
+			}
+
+			.cv__text {
+				font-size: 0.95rem;
+				color: #333;
+				line-height: 1.7;
+			}
+
+			/* Motivation Section */
+			.cv__motivation {
+				background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+				padding: 24px;
+				border-radius: 12px;
+				border-left: 4px solid #0284c7;
+			}
+
+			.cv__motivation .cv__section-title {
+				border-bottom-color: #0284c7;
+				color: #0369a1;
+			}
+
+			/* Match Section */
+			.cv__match {
+				background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+				padding: 24px;
+				border-radius: 12px;
+				border-left: 4px solid #16a34a;
+			}
+
+			.cv__match .cv__section-title {
+				border-bottom-color: #16a34a;
+				color: #15803d;
+			}
+
+			.cv__match-grid {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+
+			.cv__match-item {
+				padding: 12px 16px;
+				background: rgba(255, 255, 255, 0.7);
+				border-radius: 8px;
+				border: 1px solid rgba(22, 163, 74, 0.15);
+			}
+
+			.cv__match-requirement {
+				font-size: 0.9rem;
+				font-weight: 600;
+				color: #15803d;
+				margin-bottom: 4px;
+			}
+
+			.cv__match-item .cv__text {
+				font-size: 0.9rem;
+				line-height: 1.5;
+			}
+
+			/* Jobs */
+			.cv__job {
+				margin-bottom: 28px;
+			}
+
+			.cv__job:last-child {
+				margin-bottom: 0;
+			}
+
+			.cv__job-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				gap: 16px;
+				margin-bottom: 12px;
+			}
+
+			.cv__job-title {
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: #111;
+			}
+
+			.cv__job-company {
+				font-size: 0.95rem;
+				color: #555;
+			}
+
+			.cv__job-company-desc {
+				color: #888;
+			}
+
+			.cv__job-period {
+				font-size: 0.85rem;
+				color: #666;
+				white-space: nowrap;
+				background: #f5f5f5;
+				padding: 4px 10px;
+				border-radius: 4px;
+			}
+
+			/* Projects */
+			.cv__projects {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+
+			.cv__project {
+				padding-left: 16px;
+				border-left: 2px solid #e5e5e5;
+			}
+
+			.cv__project-name {
+				font-size: 0.95rem;
+				font-weight: 600;
+				color: #333;
+				margin-bottom: 6px;
+			}
+
+			/* Skills */
+			.cv__skills {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+
+			.cv__skill-group {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			.cv__skill-label {
+				font-size: 0.9rem;
+				font-weight: 600;
+				color: #333;
+			}
+
+			.cv__skill-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+			}
+
+			.cv__tag {
+				font-size: 0.85rem;
+				background: #f5f5f5;
+				color: #333;
+				padding: 6px 12px;
+				border-radius: 20px;
+			}
+
+			.cv__tag--highlight {
+				background: #dbeafe;
+				color: #1e40af;
+				font-weight: 500;
+			}
+
+			/* Courses */
+			.cv__courses {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+
+			.cv__course {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 16px;
+			}
+
+			.cv__course-name {
+				font-size: 0.95rem;
+				font-weight: 600;
+				color: #333;
+			}
+
+			.cv__course-provider {
+				font-size: 0.85rem;
+				color: #666;
+			}
+
+			.cv__course-period {
+				font-size: 0.85rem;
+				color: #666;
+				white-space: nowrap;
+			}
+
+			/* Link */
+			.cv__link {
+				color: #111;
+				font-weight: 500;
+				border-bottom: 1px solid #ddd;
+				transition: border-color 0.2s;
+			}
+
+			.cv__link:hover {
+				border-color: #111;
+			}
+
+			/* GDPR Consent */
+			.cv__gdpr {
+				margin-top: 48px;
+				padding-top: 24px;
+				border-top: 1px solid #eee;
+			}
+
+			.cv__gdpr p {
+				font-size: 0.75rem;
+				color: #888;
+				line-height: 1.5;
+				font-style: italic;
+			}
+
+			/* Footer */
+			.footer {
+				padding: 32px 0;
+				border-top: 1px solid #eee;
+			}
+
+			.footer__inner {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 0 24px;
+				text-align: center;
+				color: #666;
+				font-size: 0.9rem;
+			}
+
+			/* Responsive */
+			@media (max-width: 600px) {
+				.cv__name {
+					font-size: 2rem;
+				}
+
+				.cv__job-header {
+					flex-direction: column;
+					gap: 8px;
+				}
+
+				.cv__job-period {
+					align-self: flex-start;
+				}
+
+				.cv__course {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 4px;
+				}
+
+				.cv__target-company {
+					flex-direction: column;
+					gap: 8px;
+				}
+			}
+
+			@media print {
+				.cv__nav {
+					display: none !important;
+				}
+
+				.cv {
+					padding: 0 !important;
+					max-width: 100% !important;
+				}
+
+				.cv__header {
+					margin-bottom: 24px !important;
+					padding-bottom: 16px !important;
+				}
+
+				.cv__section {
+					margin-bottom: 20px !important;
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__job {
+					margin-bottom: 16px !important;
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__project {
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__section-title {
+					margin-bottom: 10px !important;
+					padding-bottom: 6px !important;
+					page-break-after: avoid;
+					break-after: avoid;
+				}
+
+				.cv__text {
+					font-size: 0.9rem !important;
+					line-height: 1.5 !important;
+				}
+
+				.footer {
+					display: none !important;
+				}
+
+				.cv__motivation {
+					background: #f8f9fa !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__match {
+					background: #f8f9fa !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__match-item {
+					background: #ffffff !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__target-company {
+					background: #f8f9fa !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__availability {
+					background: #fef3c7 !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+			}
+		</style>
+	</body>
+</html>
