@@ -1,0 +1,922 @@
+---
+const name = "Mikalai Zaleski";
+const title = "Project Manager";
+const currentYear = new Date().getFullYear();
+
+const contactInfo = {
+	location: "Warsaw, Poland (EU Citizen — fully remote)",
+	email: "sidfender27@gmail.com",
+	phone: "+48 537 001 362",
+	linkedin: "https://www.linkedin.com/in/mikalai-zaleski",
+};
+
+const profile = `Project Manager with 5+ years of experience coordinating design, development, and strategy for digital products — from sleek marketing sites to complex web apps. I've managed cross-functional teams, owned timelines and deliverables, and kept projects running smoothly in fast-paced, remote-first environments. Strong design and product mindset with hands-on experience in Figma, Notion, and agile workflows. Natural problem-solver who spots risks early and moves fast to resolve them. Entrepreneurial background — I thrive where processes are still being defined and culture is being shaped. EU citizen, ready to work fully remote. Available for B2B or direct hire.`;
+
+const motivation = `Humandone builds the kind of digital experiences I care about — ones that don't just look great but work beautifully. Your approach resonates with me: clear strategy, strong execution, relentless focus on users. I've spent years at the intersection of design, development, and business — coordinating teams, aligning stakeholders, and ensuring every detail counts. I'm drawn to Humandone's culture: no micromanagement, no cargo cult in processes, flexibility that trusts results over hours. That's exactly where I do my best work. I bring 5+ years of project coordination, a design-first mindset, experience across SaaS and creative environments, and the kind of proactive ownership where I don't just manage tasks — I solve problems and drive success. As an EU citizen working remotely, I'm ready to contribute from day one.`;
+
+const experience = [
+	{
+		role: "Product Manager → Project Coordinator",
+		company: "Alconost Inc.",
+		companyDesc: "Tech / Localization / Creative Agency",
+		location: "Remote",
+		period: "Aug 2020 — Present",
+		projects: [
+			{
+				name: "AI Data Labeling Platform — multimedialabeling.com",
+				description: `Owned project timelines, budgets, and deliverables end-to-end. Coordinated designers, developers, and QA to keep everything running smoothly. Acted as the bridge between stakeholders and internal teams — ensuring clear communication and alignment. Spotted risks early, called them out, and moved fast to resolve blockers. Built AI-powered quality scoring features, dashboards, and onboarding experience.`,
+			},
+			{
+				name: "Kraken App — Analytics & Market Intelligence",
+				description: `Led a cross-functional team (designer + 2 engineers) from concept to launch. Shaped project roadmaps in Notion, reviewed Figma prototypes with designers, synced with developers on delivery details. Identified opportunities to streamline workflows and improve team operations. The tool now powers 3+ campaigns monthly.`,
+			},
+			{
+				name: "Pikaban.com — Cross-Platform Creative Scaling",
+				description: `Coordinated cross-platform tool development (web + mobile-ready) integrating with Meta, Google, and TikTok. Collaborated with marketing on positioning and go-to-market. Oversaw final deliverables to ensure they met client expectations and quality standards.`,
+			},
+			{
+				name: "Website Optimization & Conversion Growth",
+				description: `Led data-driven improvements using GA4, Amplitude, and session recordings. Tackled roadblocks head-on with creative, practical solutions. Collaborated cross-functionally to communicate findings and align diverse partners efficiently.`,
+			},
+		],
+	},
+	{
+		role: "Business Development Manager",
+		company: "Vispaniu",
+		companyDesc: "Travel Agency (Startup)",
+		location: "Minsk",
+		period: "Jun 2018 — Feb 2020",
+		description: `Startup environment where processes didn't exist — I built them. Managed the full project and growth stack: website, content, social media, ad campaigns. Grew operations from 7 to 80 monthly customers within a year. Set the tone for how we operated, communicated, and showed up. Natural relationship-builder with curiosity, empathy, and ability to inspire trust.`,
+	},
+	{
+		role: "Operating Officer",
+		company: "AtTheTop Hostels Group",
+		location: "Dubai",
+		period: "Jun 2015 — Jun 2018",
+		description: `Coordinated operations across multiple platforms (Airbnb, Booking.com, Agoda, Expedia). Managed platform integrations, built operational dashboards, coordinated a multi-cultural team. Developed ability to navigate complex challenges and find business-aligned solutions in fast-paced, international environment.`,
+	},
+];
+
+const education = {
+	institution: "Minsk Innovation University",
+	location: "Minsk",
+	degree: "Bachelor degree in Programming",
+	period: "Sep 2010 — Jun 2015",
+};
+
+const skills = {
+	projectManagement: [
+		"Project timelines, budgets & deliverables",
+		"Cross-functional team coordination (Design, Dev, Business)",
+		"Stakeholder communication & alignment",
+		"Risk identification & proactive problem-solving",
+		"Backlog management & prioritization",
+		"Scrum / Agile workflows",
+		"Quality assurance & final deliverable oversight",
+	],
+	tools: ["Notion", "JIRA", "Figma", "Slack", "GA4", "Amplitude", "Hotjar", "GitHub", "Vercel", "Webflow (basic)"],
+	bonusExposure: ["Finance & SaaS products", "AI-powered features", "Creative agency environment", "HealthTech exposure", "International / remote teams"],
+};
+
+const courses = [
+	{
+		name: "Data-Driven Product Management",
+		provider: "GoPractice Simulator",
+		period: "Jun 2022 — Aug 2025",
+	},
+	{ name: "Front-End Development", provider: "IT Academy", period: "Dec 2020 — Feb 2021" },
+	{ name: "UX/UI Design", provider: "Adukar", period: "Dec 2019 — Feb 2020" },
+];
+
+const languages = ["English (Advanced — C1)", "Russian (Native)", "Polish (Intermediate)", "Spanish (Basic)"];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{name} — {title} CV | Humandone</title>
+		<meta
+			name="description"
+			content={`${name} - ${title}. ${profile.slice(0, 150)}...`}
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main class="cv">
+			<!-- Company Target Badge -->
+			<div class="cv__target-company">
+				<svg viewBox="0 0 204 25" focusable="false" class="cv__company-logo" fill-rule="evenodd" clip-rule="evenodd"><path fill="currentColor" d="M0.312 24V0.199998H5.82V9.822H14.048V0.199998H19.556V24H14.048V14.548H5.82V24H0.312ZM29.897 24.442C27.9477 24.442 26.4517 23.864 25.409 22.708C24.3664 21.5293 23.845 19.8747 23.845 17.744V7.612H29.115V16.588C29.115 18.9 30.0217 20.056 31.835 20.056C33.943 20.056 34.997 18.8433 34.997 16.418V7.612H40.165V24H34.997V21.654C34.0224 23.5127 32.3224 24.442 29.897 24.442ZM44.4682 24V7.612H49.6702V9.992C50.0328 9.15333 50.6222 8.47333 51.4382 7.952C52.2768 7.43067 53.2515 7.17 54.3622 7.17C56.9462 7.17 58.6575 8.17867 59.4962 10.196C59.9495 9.28933 60.6408 8.564 61.5702 8.02C62.4995 7.45333 63.5535 7.17 64.7322 7.17C68.6082 7.17 70.5462 9.39133 70.5462 13.834V24H65.3102V14.786C65.3102 12.6327 64.4942 11.556 62.8622 11.556C61.0262 11.556 60.1082 12.8933 60.1082 15.568V24H54.8722V14.752C54.8722 12.6213 54.0675 11.556 52.4582 11.556C51.5515 11.556 50.8602 11.862 50.3842 12.474C49.9082 13.0633 49.6702 14.0947 49.6702 15.568V24H44.4682ZM81.1778 24.442C78.7978 24.442 76.9165 23.6373 75.5338 22.028C74.1511 20.4187 73.4598 18.3447 73.4598 15.806C73.4598 13.3127 74.1738 11.25 75.6018 9.618C77.0298 7.986 78.9111 7.17 81.2458 7.17C82.4018 7.17 83.4331 7.41933 84.3398 7.918C85.2465 8.41667 85.9265 9.09667 86.3798 9.958V7.612H91.5478V24H86.3798V21.688C85.9265 22.504 85.2238 23.1727 84.2718 23.694C83.3425 24.1927 82.3111 24.442 81.1778 24.442ZM82.6738 20.124C83.9205 20.124 84.8838 19.716 85.5638 18.9C86.2438 18.084 86.5838 17.0527 86.5838 15.806C86.5838 14.582 86.2438 13.562 85.5638 12.746C84.8838 11.93 83.9205 11.522 82.6738 11.522C81.4951 11.522 80.5431 11.9187 79.8178 12.712C79.1151 13.5053 78.7638 14.5367 78.7638 15.806C78.7638 17.0753 79.1151 18.118 79.8178 18.934C80.5431 19.7273 81.4951 20.124 82.6738 20.124ZM95.8666 24V7.612H101.069V9.992C102.043 8.11067 103.811 7.17 106.373 7.17C110.362 7.17 112.357 9.40267 112.357 13.868V24H107.121V15.568C107.121 14.1627 106.894 13.1427 106.441 12.508C106.01 11.8733 105.273 11.556 104.231 11.556C102.123 11.556 101.069 12.848 101.069 15.432V24H95.8666ZM128.215 0.199998H133.417V24H128.249V21.688C127.796 22.504 127.093 23.1727 126.141 23.694C125.212 24.1927 124.18 24.442 123.047 24.442C120.667 24.442 118.786 23.6373 117.403 22.028C116.02 20.4187 115.329 18.3447 115.329 15.806C115.329 13.3127 116.043 11.25 117.471 9.618C118.899 7.986 120.78 7.17 123.115 7.17C124.271 7.17 125.302 7.41933 126.209 7.918C127.116 8.41667 127.796 9.09667 128.249 9.958V8.564H128.215V0.199998ZM124.543 20.124C125.79 20.124 126.753 19.716 127.433 18.9C128.113 18.084 128.453 17.0527 128.453 15.806C128.453 14.582 128.113 13.562 127.433 12.746C126.753 11.93 125.79 11.522 124.543 11.522C123.364 11.522 122.412 11.9187 121.687 12.712C120.984 13.5053 120.633 14.5367 120.633 15.806C120.633 17.0753 120.984 18.118 121.687 18.934C122.412 19.7273 123.364 20.124 124.543 20.124ZM152.152 22.062C150.52 23.694 148.321 24.51 145.556 24.51C142.79 24.51 140.58 23.694 138.926 22.062C137.271 20.43 136.444 18.3447 136.444 15.806C136.444 13.2673 137.271 11.1933 138.926 9.584C140.58 7.952 142.79 7.136 145.556 7.136C148.321 7.136 150.52 7.952 152.152 9.584C153.806 11.1933 154.634 13.2673 154.634 15.806C154.634 18.3447 153.806 20.43 152.152 22.062ZM145.556 20.09C146.757 20.09 147.709 19.6933 148.412 18.9C149.114 18.1067 149.466 17.0753 149.466 15.806C149.466 14.5367 149.114 13.5053 148.412 12.712C147.709 11.9187 146.757 11.522 145.556 11.522C144.332 11.522 143.368 11.9187 142.666 12.712C141.986 13.5053 141.646 14.5367 141.646 15.806C141.646 17.0753 141.986 18.1067 142.666 18.9C143.368 19.6933 144.332 20.09 145.556 20.09ZM157.624 24V7.612H162.826V9.992C163.801 8.11067 165.569 7.17 168.13 7.17C172.12 7.17 174.114 9.40267 174.114 13.868V24H168.878V15.568C168.878 14.1627 168.652 13.1427 168.198 12.508C167.768 11.8733 167.031 11.556 165.988 11.556C163.88 11.556 162.826 12.848 162.826 15.432V24H157.624ZM194.393 14.956C194.393 15.636 194.347 16.3953 194.257 17.234H182.153C182.198 18.2993 182.561 19.1267 183.241 19.716C183.921 20.3053 184.839 20.6 185.995 20.6C187.581 20.6 188.601 20.09 189.055 19.07H194.155C193.905 20.6793 193.021 21.994 191.503 23.014C190.007 24.0113 188.171 24.51 185.995 24.51C183.207 24.51 181.008 23.7393 179.399 22.198C177.789 20.6567 176.985 18.526 176.985 15.806C176.985 13.1313 177.789 11.0233 179.399 9.482C181.008 7.918 183.15 7.136 185.825 7.136C188.363 7.136 190.426 7.86133 192.013 9.312C193.599 10.7627 194.393 12.644 194.393 14.956ZM182.153 14.004H189.259C189.236 12.916 188.93 12.0773 188.341 11.488C187.751 10.8987 186.901 10.604 185.791 10.604C184.68 10.604 183.796 10.9213 183.139 11.556C182.504 12.168 182.175 12.984 182.153 14.004ZM202.479 23.354C201.844 24.0113 201.051 24.34 200.099 24.34C199.147 24.34 198.342 24.0113 197.685 23.354C197.05 22.6967 196.733 21.9147 196.733 21.008C196.733 20.0787 197.05 19.2967 197.685 18.662C198.342 18.0047 199.147 17.676 200.099 17.676C201.051 17.676 201.844 18.0047 202.479 18.662C203.136 19.2967 203.465 20.0787 203.465 21.008C203.465 21.9147 203.136 22.6967 202.479 23.354Z"></path></svg>
+				<span>Application for Project Manager — Humandone</span>
+			</div>
+
+			<!-- Availability Notice -->
+			<div class="cv__availability">
+				<p><strong>EU citizen</strong> — ready to work fully remote. Available for <strong>B2B contract or direct hire</strong>.</p>
+			</div>
+
+			<!-- Header -->
+			<header class="cv__header">
+				<img src="/photo.png" alt={name} class="cv__photo" />
+				<h1 class="cv__name">{name}</h1>
+				<p class="cv__title">{title}</p>
+				<div class="cv__contact">
+					<span class="cv__contact-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path
+								d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+							></path>
+							<circle cx="12" cy="10" r="3"></circle>
+						</svg>
+						{contactInfo.location}
+					</span>
+					<a href={`mailto:${contactInfo.email}`} class="cv__contact-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<rect width="20" height="16" x="2" y="4" rx="2"></rect>
+							<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+						</svg>
+						{contactInfo.email}
+					</a>
+					<a href={`tel:${contactInfo.phone.replace(/\s/g, "")}`} class="cv__contact-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path
+								d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+							></path>
+						</svg>
+						{contactInfo.phone}
+					</a>
+					<a
+						href={contactInfo.linkedin}
+						target="_blank"
+						rel="noreferrer"
+						class="cv__contact-item"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+						>
+							<path
+								d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+							></path>
+						</svg>
+						LinkedIn
+					</a>
+				</div>
+			</header>
+
+			<!-- Profile -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Profile</h2>
+				<p class="cv__text">{profile}</p>
+			</section>
+
+			<!-- Motivation -->
+			<section class="cv__section cv__motivation">
+				<h2 class="cv__section-title">Why Humandone</h2>
+				<p class="cv__text">{motivation}</p>
+			</section>
+
+			<!-- How I Match the Role -->
+			<section class="cv__section cv__match">
+				<h2 class="cv__section-title">How I Match the Role</h2>
+				<div class="cv__match-grid">
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">1+ year managing projects in international/creative environments</h4>
+						<p class="cv__text">5+ years coordinating projects across international, remote-first teams. Experience in creative agency environment with design-driven delivery.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Strong prioritization, planning & backlog management</h4>
+						<p class="cv__text">I shape project roadmaps in Notion, manage backlogs, and keep complex projects with multiple stakeholders running on track and on schedule.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Design & product mindset</h4>
+						<p class="cv__text">I review Figma prototypes with designers, understand UX principles, and believe good design deserves good process. I've taken a UX/UI course and work hands-on with design tools.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Problem-solving & proactive risk management</h4>
+						<p class="cv__text">I speak up before problems occur. I proactively spot risks, call them out early, and move fast to resolve blockers with creative, practical solutions.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">People skills & collaboration</h4>
+						<p class="cv__text">Natural relationship-builder with curiosity, empathy, and ability to inspire trust. I bridge clients and internal teams, ensuring clear communication and alignment.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Communication & conflict resolution</h4>
+						<p class="cv__text">Strong written and verbal skills (English C1). Experienced in aligning diverse partners, resolving conflicts, and articulating ideas clearly to stakeholders.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Adaptability & fast-paced delivery</h4>
+						<p class="cv__text">Comfortable in continuous delivery environments. Willing to fail fast and learn. Every project I've run started with building processes alongside shipping work.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Even better: Finance, AI, SaaS, HealthTech experience</h4>
+						<p class="cv__text">I've built AI-powered platforms, worked on SaaS tools, and have exposure to HealthTech through data labeling projects. Basic Webflow experience from landing page projects.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Experience -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Professional Experience</h2>
+				{
+					experience.map((job) => (
+						<div class="cv__job">
+							<div class="cv__job-header">
+								<div>
+									<h3 class="cv__job-title">{job.role}</h3>
+									<p class="cv__job-company">{job.company}{job.companyDesc && (<span class="cv__job-company-desc"> — {job.companyDesc}</span>)}, {job.location}</p>
+								</div>
+								<span class="cv__job-period">{job.period}</span>
+							</div>
+							{job.projects ? (
+								<div class="cv__projects">
+									{job.projects.map((project) => (
+										<div class="cv__project">
+											<h4 class="cv__project-name">{project.name}</h4>
+											<p class="cv__text">{project.description}</p>
+										</div>
+									))}
+								</div>
+							) : (
+								<p class="cv__text">{job.description}</p>
+							)}
+						</div>
+					))
+				}
+			</section>
+
+			<!-- Side Projects -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Side Projects</h2>
+				<p class="cv__text" style="margin-bottom: 12px;">
+					I actively build and ship consumer-facing products — demonstrating hands-on execution and creative problem-solving:
+				</p>
+				<div class="cv__projects">
+					<div class="cv__project">
+						<h4 class="cv__project-name">calmdown.space</h4>
+						<p class="cv__text">A productivity tool with ambient sounds for focus — built with AI tools, deployed on Vercel. End-to-end project ownership from concept to launch.</p>
+					</div>
+					<div class="cv__project">
+						<h4 class="cv__project-name">ftns.space</h4>
+						<p class="cv__text">A 30-day fitness challenge journal — consumer mobile-ready app with daily structured content and progress tracking.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Education -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Education</h2>
+				<div class="cv__job">
+					<div class="cv__job-header">
+						<div>
+							<h3 class="cv__job-title">{education.institution}</h3>
+							<p class="cv__job-company">{education.degree}, {education.location}</p>
+						</div>
+						<span class="cv__job-period">{education.period}</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Skills -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Skills and Tools</h2>
+				<div class="cv__skills">
+					<div class="cv__skill-group">
+						<h4 class="cv__skill-label">Project Management</h4>
+						<div class="cv__skill-tags">
+							{skills.projectManagement.map((skill) => <span class="cv__tag">{skill}</span>)}
+						</div>
+					</div>
+					<div class="cv__skill-group">
+						<h4 class="cv__skill-label">Tools</h4>
+						<div class="cv__skill-tags">
+							{skills.tools.map((tool) => <span class="cv__tag">{tool}</span>)}
+						</div>
+					</div>
+					<div class="cv__skill-group">
+						<h4 class="cv__skill-label">Nice-to-Have Experience</h4>
+						<div class="cv__skill-tags">
+							{skills.bonusExposure.map((item) => <span class="cv__tag cv__tag--highlight">{item}</span>)}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Courses -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Courses</h2>
+				<div class="cv__courses">
+					{
+						courses.map((course) => (
+							<div class="cv__course">
+								<div class="cv__course-info">
+									<h4 class="cv__course-name">{course.name}</h4>
+									<p class="cv__course-provider">{course.provider}</p>
+								</div>
+								<span class="cv__course-period">{course.period}</span>
+							</div>
+						))
+					}
+				</div>
+			</section>
+
+			<!-- Languages -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Languages</h2>
+				<div class="cv__skill-tags">
+					{languages.map((lang) => <span class="cv__tag">{lang}</span>)}
+				</div>
+			</section>
+
+			<!-- Hobbies -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Hobbies</h2>
+				<p class="cv__text">
+					I played in a band and organized recordings, concerts, and video shoots — experience in creative project coordination.
+					Now, I continue working on music solo, releasing lo-fi tracks — perfect for focused working.
+					<a
+						href="https://linktr.ee/besidethepoint"
+						target="_blank"
+						rel="noreferrer"
+						class="cv__link">linktr.ee/besidethepoint</a
+					>
+				</p>
+			</section>
+
+			<!-- GDPR Consent -->
+			<footer class="cv__gdpr">
+				<p>I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).</p>
+			</footer>
+		</main>
+
+		<footer class="footer">
+			<div class="container footer__inner">
+				<p>© <span id="footerYear">{currentYear}</span> {name}</p>
+			</div>
+		</footer>
+
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				font-family:
+					"Inter",
+					-apple-system,
+					BlinkMacSystemFont,
+					"Segoe UI",
+					Roboto,
+					sans-serif;
+				background: #ffffff;
+				color: #1a1a1a;
+				line-height: 1.6;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			.cv {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 40px 24px 60px;
+			}
+
+			.cv__nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 24px;
+			}
+
+			.back-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				font-size: 0.9rem;
+				color: #666;
+				transition: color 0.2s;
+			}
+
+			.back-link:hover {
+				color: #111;
+			}
+
+			.download-btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				padding: 10px 18px;
+				background: #111;
+				color: #fff;
+				border: none;
+				border-radius: 10px;
+				font-size: 0.9rem;
+				font-weight: 500;
+				cursor: pointer;
+				transition: background 0.2s, transform 0.2s, opacity 0.2s;
+			}
+
+			.download-btn:hover:not(:disabled) {
+				background: #333;
+				transform: translateY(-2px);
+			}
+
+			.download-btn:disabled {
+				opacity: 0.7;
+				cursor: wait;
+			}
+
+			/* Target Company Badge */
+			.cv__target-company {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 12px;
+				padding: 16px 24px;
+				background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+				border-radius: 12px;
+				margin-bottom: 12px;
+				border: 1px solid #dee2e6;
+			}
+
+			.cv__company-logo {
+				height: 24px;
+				width: auto;
+				color: #495057;
+			}
+
+			.cv__target-company span {
+				font-size: 1rem;
+				font-weight: 500;
+				color: #495057;
+			}
+
+			/* Availability Notice */
+			.cv__availability {
+				text-align: center;
+				padding: 12px 24px;
+				background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+				border-radius: 10px;
+				margin-bottom: 32px;
+				border: 1px solid #fde68a;
+			}
+
+			.cv__availability p {
+				font-size: 0.9rem;
+				color: #92400e;
+				margin: 0;
+			}
+
+			/* Header */
+			.cv__header {
+				text-align: center;
+				margin-bottom: 48px;
+				padding-bottom: 32px;
+				border-bottom: 1px solid #eee;
+			}
+
+			.cv__photo {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				object-fit: cover;
+				margin-bottom: 16px;
+				border: 3px solid #f0f0f0;
+			}
+
+			.cv__name {
+				font-size: 2.5rem;
+				font-weight: 700;
+				letter-spacing: -0.03em;
+				color: #111;
+				margin-bottom: 4px;
+			}
+
+			.cv__title {
+				font-size: 1.25rem;
+				color: #666;
+				margin-bottom: 20px;
+			}
+
+			.cv__contact {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 16px 24px;
+			}
+
+			.cv__contact-item {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				font-size: 0.9rem;
+				color: #555;
+				transition: color 0.2s;
+			}
+
+			a.cv__contact-item:hover {
+				color: #111;
+			}
+
+			/* Sections */
+			.cv__section {
+				margin-bottom: 36px;
+			}
+
+			.cv__section-title {
+				font-size: 1.1rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				color: #111;
+				margin-bottom: 16px;
+				padding-bottom: 8px;
+				border-bottom: 2px solid #111;
+			}
+
+			.cv__text {
+				font-size: 0.95rem;
+				color: #333;
+				line-height: 1.7;
+			}
+
+			/* Motivation Section */
+			.cv__motivation {
+				background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+				padding: 24px;
+				border-radius: 12px;
+				border-left: 4px solid #0284c7;
+			}
+
+			.cv__motivation .cv__section-title {
+				border-bottom-color: #0284c7;
+				color: #0369a1;
+			}
+
+			/* Match Section */
+			.cv__match {
+				background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+				padding: 24px;
+				border-radius: 12px;
+				border-left: 4px solid #16a34a;
+			}
+
+			.cv__match .cv__section-title {
+				border-bottom-color: #16a34a;
+				color: #15803d;
+			}
+
+			.cv__match-grid {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+
+			.cv__match-item {
+				padding: 12px 16px;
+				background: rgba(255, 255, 255, 0.7);
+				border-radius: 8px;
+				border: 1px solid rgba(22, 163, 74, 0.15);
+			}
+
+			.cv__match-requirement {
+				font-size: 0.9rem;
+				font-weight: 600;
+				color: #15803d;
+				margin-bottom: 4px;
+			}
+
+			.cv__match-item .cv__text {
+				font-size: 0.9rem;
+				line-height: 1.5;
+			}
+
+			/* Jobs */
+			.cv__job {
+				margin-bottom: 28px;
+			}
+
+			.cv__job:last-child {
+				margin-bottom: 0;
+			}
+
+			.cv__job-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				gap: 16px;
+				margin-bottom: 12px;
+			}
+
+			.cv__job-title {
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: #111;
+			}
+
+			.cv__job-company {
+				font-size: 0.95rem;
+				color: #555;
+			}
+
+			.cv__job-company-desc {
+				color: #888;
+			}
+
+			.cv__job-period {
+				font-size: 0.85rem;
+				color: #666;
+				white-space: nowrap;
+				background: #f5f5f5;
+				padding: 4px 10px;
+				border-radius: 4px;
+			}
+
+			/* Projects */
+			.cv__projects {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+
+			.cv__project {
+				padding-left: 16px;
+				border-left: 2px solid #e5e5e5;
+			}
+
+			.cv__project-name {
+				font-size: 0.95rem;
+				font-weight: 600;
+				color: #333;
+				margin-bottom: 6px;
+			}
+
+			/* Skills */
+			.cv__skills {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+
+			.cv__skill-group {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			.cv__skill-label {
+				font-size: 0.9rem;
+				font-weight: 600;
+				color: #333;
+			}
+
+			.cv__skill-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+			}
+
+			.cv__tag {
+				font-size: 0.85rem;
+				background: #f5f5f5;
+				color: #333;
+				padding: 6px 12px;
+				border-radius: 20px;
+			}
+
+			.cv__tag--highlight {
+				background: #dbeafe;
+				color: #1e40af;
+				font-weight: 500;
+			}
+
+			/* Courses */
+			.cv__courses {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+
+			.cv__course {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 16px;
+			}
+
+			.cv__course-name {
+				font-size: 0.95rem;
+				font-weight: 600;
+				color: #333;
+			}
+
+			.cv__course-provider {
+				font-size: 0.85rem;
+				color: #666;
+			}
+
+			.cv__course-period {
+				font-size: 0.85rem;
+				color: #666;
+				white-space: nowrap;
+			}
+
+			/* Link */
+			.cv__link {
+				color: #111;
+				font-weight: 500;
+				border-bottom: 1px solid #ddd;
+				transition: border-color 0.2s;
+			}
+
+			.cv__link:hover {
+				border-color: #111;
+			}
+
+			/* GDPR Consent */
+			.cv__gdpr {
+				margin-top: 48px;
+				padding-top: 24px;
+				border-top: 1px solid #eee;
+			}
+
+			.cv__gdpr p {
+				font-size: 0.75rem;
+				color: #888;
+				line-height: 1.5;
+				font-style: italic;
+			}
+
+			/* Footer */
+			.footer {
+				padding: 32px 0;
+				border-top: 1px solid #eee;
+			}
+
+			.footer__inner {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 0 24px;
+				text-align: center;
+				color: #666;
+				font-size: 0.9rem;
+			}
+
+			/* Responsive */
+			@media (max-width: 600px) {
+				.cv__name {
+					font-size: 2rem;
+				}
+
+				.cv__job-header {
+					flex-direction: column;
+					gap: 8px;
+				}
+
+				.cv__job-period {
+					align-self: flex-start;
+				}
+
+				.cv__course {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 4px;
+				}
+
+				.cv__target-company {
+					flex-direction: column;
+					gap: 8px;
+				}
+			}
+
+			@media print {
+				.cv__nav {
+					display: none !important;
+				}
+
+				.cv {
+					padding: 0 !important;
+					max-width: 100% !important;
+				}
+
+				.cv__header {
+					margin-bottom: 24px !important;
+					padding-bottom: 16px !important;
+				}
+
+				.cv__section {
+					margin-bottom: 20px !important;
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__job {
+					margin-bottom: 16px !important;
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__project {
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__section-title {
+					margin-bottom: 10px !important;
+					padding-bottom: 6px !important;
+					page-break-after: avoid;
+					break-after: avoid;
+				}
+
+				.cv__text {
+					font-size: 0.9rem !important;
+					line-height: 1.5 !important;
+				}
+
+				.footer {
+					display: none !important;
+				}
+
+				.cv__motivation {
+					background: #f8f9fa !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__match {
+					background: #f8f9fa !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__match-item {
+					background: #ffffff !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__target-company {
+					background: #f8f9fa !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__availability {
+					background: #fef3c7 !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+			}
+		</style>
+	</body>
+</html>
