@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nickzaleski.github.io/sitemap.xml
+Sitemap: https://nickzaleski.com/sitemap.xml
