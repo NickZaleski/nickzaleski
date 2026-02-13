@@ -1,0 +1,1130 @@
+---
+const name = "Mikalai Zaleski";
+const title = "Project Manager";
+const currentYear = new Date().getFullYear();
+
+const contactInfo = {
+	location: "Warsaw, Poland (EU Citizen)",
+	email: "sidfender27@gmail.com",
+	phone: "+48 537 001 362",
+	linkedin: "https://www.linkedin.com/in/mikalai-zaleski",
+};
+
+const profile = `Project Manager with 5+ years of experience leading medium to large-scale implementation projects in fast-paced, multinational environments. Strong track record delivering projects on time, within scope and budget while managing multiple project streams simultaneously. Experience with both greenfield and brownfield initiatives — from building platforms from scratch to optimizing existing systems. Proficient with project management tools (JIRA, Notion) and comfortable working within Scrum and Agile frameworks. Skilled at stakeholder management across all levels — from C-level executives to junior team members — with a servant leadership approach. Experience with vendor management and third-party coordination. Based in Warsaw, EU citizen, ready to start immediately.`;
+
+const motivation = `Clarity is the kind of company where project management isn't just about tracking tasks — it's about delivering real value to clients through disciplined execution and continuous improvement. That's exactly how I approach PM work. I've spent years ensuring projects stay on track in relation to time, scope, and budget while juggling multiple streams and stakeholders. I thrive as a liaison between business, technical teams, and clients — keeping everyone on the same page and moving forward. What draws me to Clarity is the focus on methodology and SOPs that actually bring value, not just process for process's sake. I bring 5+ years of hands-on project leadership, experience with Scrum/Agile frameworks, vendor management, and the kind of amicable personality that builds trust at every level. I'm excited to contribute to your Project Management Unit and internal improvement initiatives.`;
+
+const experience = [
+	{
+		role: "Product Manager → Project Manager",
+		company: "Alconost Inc.",
+		companyDesc: "Tech / Localization / Implementation Services",
+		location: "Remote",
+		period: "Aug 2020 — Present",
+		projects: [
+			{
+				name: "AI Data Labeling Platform — Greenfield Implementation",
+				description: `Led medium-scale greenfield implementation project from scoping to delivery. Ensured project was on track in relation to time, scope, and budget. Acted as liaison between all stakeholders — client, engineering, design, QA — ensuring alignment. Tracked, reported, and prepared relevant data for management and stakeholders. Followed Scrum methodology with sprint planning, daily standups, and retrospectives. Managed vendor relationships and third-party integrations. Coordinated risk management and issue resolution throughout project lifecycle.`,
+			},
+			{
+				name: "Kraken App — Multi-Stream Project Coordination",
+				description: `Managed multiple project streams simultaneously (data integration, UI development, analytics). Led cross-functional team (designer + 2 engineers) with servant leadership approach. Juggled deadlines and budgets across parallel workstreams. Used JIRA for project tracking, sprint management, and reporting. Contributed to internal process improvements and methodology refinement. Communicated effectively with stakeholders from technical teams to business leadership.`,
+			},
+			{
+				name: "Pikaban.com — Brownfield Optimization",
+				description: `Led brownfield initiative to optimize existing platform with new integrations (Meta, Google, TikTok). Ensured project methodology and SOPs were followed while delivering client value. Assisted in coordination from scoping to daily tasks and deliverables. Managed contractual deliverables with external platform vendors. Tracked project progress and prepared status reports for client and management.`,
+			},
+			{
+				name: "Internal Process Improvement Initiatives",
+				description: `Contributed to development of project management practices and internal improvement projects. Established documentation standards, work instructions, and operating procedures. Led data-driven improvements using analytics and stakeholder feedback. Trained team members on project methodology and tools.`,
+			},
+		],
+	},
+	{
+		role: "Business Development Manager",
+		company: "Vispaniu",
+		companyDesc: "Travel Agency (Startup)",
+		location: "Minsk",
+		period: "Jun 2018 — Feb 2020",
+		description: `Project leadership in startup environment — managed full operational implementation from scratch. Kept deadlines and budgets while building processes alongside delivery. Liaison between vendors, partners, and internal operations. Grew operations from 7 to 80 monthly customers through disciplined execution. Built SOPs and methodology that brought measurable business value. Experience talking to stakeholders at all levels — from partners to junior staff.`,
+	},
+	{
+		role: "Operating Officer",
+		company: "AtTheTop Hostels Group",
+		location: "Dubai",
+		period: "Jun 2015 — Jun 2018",
+		description: `Multi-platform implementation and operations management across Airbnb, Booking.com, Agoda, Expedia. Managed vendor relationships and contractual deliverables with platform providers. Coordinated multiple project streams simultaneously in fast-paced environment. Tracked, reported, and prepared operational data for management. Experience in multinational environment with diverse stakeholder management.`,
+	},
+];
+
+const education = {
+	institution: "Minsk Innovation University",
+	location: "Minsk",
+	degree: "Bachelor degree in Programming",
+	period: "Sep 2010 — Jun 2015",
+};
+
+const skills = {
+	projectManagement: [
+		"Project planning & execution (time, scope, budget)",
+		"Multi-stream project coordination",
+		"Stakeholder management (C-level to junior)",
+		"Risk management & issue resolution",
+		"Scrum & Agile methodologies",
+		"Vendor management & contractual deliverables",
+		"Project reporting & status tracking",
+		"SOP development & process improvement",
+	],
+	tools: ["JIRA", "Notion", "MS Project (familiar)", "Confluence", "Figma", "GA4", "Amplitude", "GitHub", "Slack", "Miro"],
+	bonusExposure: ["Greenfield & brownfield implementations", "SAP ecosystem (basic exposure)", "Scrum framework experience", "Servant leadership approach", "Multinational project environments"],
+};
+
+const courses = [
+	{
+		name: "Data-Driven Product Management",
+		provider: "GoPractice Simulator",
+		period: "Jun 2022 — Aug 2025",
+	},
+	{ name: "Front-End Development", provider: "IT Academy", period: "Dec 2020 — Feb 2021" },
+	{ name: "UX/UI Design", provider: "Adukar", period: "Dec 2019 — Feb 2020" },
+];
+
+const languages = ["English (Advanced — C1)", "Russian (Native)", "Polish (Intermediate)", "Spanish (Basic)"];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{name} — {title} CV | Clarity</title>
+		<meta
+			name="description"
+			content={`${name} - ${title}. ${profile.slice(0, 150)}...`}
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main class="cv">
+			<nav class="cv__nav">
+				<a href="/" class="back-link">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="m15 18-6-6 6-6"></path>
+					</svg>
+					Back to Portfolio
+				</a>
+				<button id="downloadPdfBtn" class="download-btn">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+						<polyline points="7 10 12 15 17 10"></polyline>
+						<line x1="12" y1="15" x2="12" y2="3"></line>
+					</svg>
+					<span id="downloadBtnText">Download PDF</span>
+				</button>
+			</nav>
+
+			<!-- Company Target Badge -->
+			<div class="cv__target-company">
+				<img src="/clariy.jpg" alt="Clarity" class="cv__company-logo" />
+				<span>Application for Project Manager — Clarity</span>
+			</div>
+
+			<!-- Availability Notice -->
+			<div class="cv__availability">
+				<p><strong>EU citizen based in Warsaw</strong> — ready to start immediately. Available for <strong>B2B contract or direct hire</strong>.</p>
+			</div>
+
+			<!-- Header -->
+			<header class="cv__header">
+				<img src="/photo.png" alt={name} class="cv__photo" />
+				<h1 class="cv__name">{name}</h1>
+				<p class="cv__title">{title}</p>
+				<div class="cv__contact">
+					<span class="cv__contact-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path
+								d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+							></path>
+							<circle cx="12" cy="10" r="3"></circle>
+						</svg>
+						{contactInfo.location}
+					</span>
+					<a href={`mailto:${contactInfo.email}`} class="cv__contact-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<rect width="20" height="16" x="2" y="4" rx="2"></rect>
+							<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+						</svg>
+						{contactInfo.email}
+					</a>
+					<a href={`tel:${contactInfo.phone.replace(/\s/g, "")}`} class="cv__contact-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path
+								d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+							></path>
+						</svg>
+						{contactInfo.phone}
+					</a>
+					<a
+						href={contactInfo.linkedin}
+						target="_blank"
+						rel="noreferrer"
+						class="cv__contact-item"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="currentColor"
+						>
+							<path
+								d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+							></path>
+						</svg>
+						LinkedIn
+					</a>
+				</div>
+			</header>
+
+			<!-- Profile -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Profile</h2>
+				<p class="cv__text">{profile}</p>
+			</section>
+
+			<!-- Motivation -->
+			<section class="cv__section cv__motivation">
+				<h2 class="cv__section-title">Why Clarity</h2>
+				<p class="cv__text">{motivation}</p>
+			</section>
+
+			<!-- How I Match the Role -->
+			<section class="cv__section cv__match">
+				<h2 class="cv__section-title">How I Match the Role</h2>
+				<div class="cv__match-grid">
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">5+ years leading medium to large-scale implementation projects</h4>
+						<p class="cv__text">5+ years of hands-on project leadership across greenfield and brownfield initiatives. Led platform implementations from scoping to delivery in multinational environments.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Experience with Scrum and Agile frameworks</h4>
+						<p class="cv__text">Practical experience working within Scrum framework — sprint planning, daily standups, retrospectives. Comfortable with Agile methodologies and iterative delivery.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Proficient with project management tools (JIRA, MS Project, etc.)</h4>
+						<p class="cv__text">Daily user of JIRA for project tracking, sprint management, and reporting. Familiar with MS Project. Also use Notion, Confluence, and Miro for planning and documentation.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Amicable personality & servant leadership</h4>
+						<p class="cv__text">Natural relationship-builder who communicates effectively with everyone from C-level stakeholders to junior employees. Mindful servant leader focused on enabling team success.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Ability to keep deadlines and budgets while juggling multiple projects</h4>
+						<p class="cv__text">Strong track record delivering on time and within budget while managing multiple project streams simultaneously. Disciplined approach to scope management and prioritization.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Vendor management and contractual deliverables</h4>
+						<p class="cv__text">Experience managing vendor relationships and third-party integrations. Comfortable with contractual deliverables, SLAs, and external partner coordination.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">Stakeholder liaison & reporting</h4>
+						<p class="cv__text">Skilled at acting as liaison between all project stakeholders — keeping everyone on the same page. Experience tracking, reporting, and preparing data for clients, finance, and management.</p>
+					</div>
+					<div class="cv__match-item">
+						<h4 class="cv__match-requirement">SAP implementations (advantage)</h4>
+						<p class="cv__text">Basic exposure to SAP ecosystem through platform integrations. Familiar with enterprise implementation patterns and ERP integration requirements.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Experience -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Professional Experience</h2>
+				{
+					experience.map((job) => (
+						<div class="cv__job">
+							<div class="cv__job-header">
+								<div>
+									<h3 class="cv__job-title">{job.role}</h3>
+									<p class="cv__job-company">{job.company}{job.companyDesc && (<span class="cv__job-company-desc"> — {job.companyDesc}</span>)}, {job.location}</p>
+								</div>
+								<span class="cv__job-period">{job.period}</span>
+							</div>
+							{job.projects ? (
+								<div class="cv__projects">
+									{job.projects.map((project) => (
+										<div class="cv__project">
+											<h4 class="cv__project-name">{project.name}</h4>
+											<p class="cv__text">{project.description}</p>
+										</div>
+									))}
+								</div>
+							) : (
+								<p class="cv__text">{job.description}</p>
+							)}
+						</div>
+					))
+				}
+			</section>
+
+			<!-- Side Projects -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Side Projects</h2>
+				<p class="cv__text" style="margin-bottom: 12px;">
+					I actively lead personal implementation projects — demonstrating end-to-end project ownership:
+				</p>
+				<div class="cv__projects">
+					<div class="cv__project">
+						<h4 class="cv__project-name">calmdown.space</h4>
+						<p class="cv__text">Greenfield web application — managed full project lifecycle from scoping to deployment. Delivered on time with defined scope and minimal budget.</p>
+					</div>
+					<div class="cv__project">
+						<h4 class="cv__project-name">ftns.space</h4>
+						<p class="cv__text">Consumer mobile-ready app — coordinated design, development, and content creation. Iterative delivery with continuous improvement based on user feedback.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Education -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Education</h2>
+				<div class="cv__job">
+					<div class="cv__job-header">
+						<div>
+							<h3 class="cv__job-title">{education.institution}</h3>
+							<p class="cv__job-company">{education.degree}, {education.location}</p>
+						</div>
+						<span class="cv__job-period">{education.period}</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- Skills -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Skills and Tools</h2>
+				<div class="cv__skills">
+					<div class="cv__skill-group">
+						<h4 class="cv__skill-label">Project Management</h4>
+						<div class="cv__skill-tags">
+							{skills.projectManagement.map((skill) => <span class="cv__tag">{skill}</span>)}
+						</div>
+					</div>
+					<div class="cv__skill-group">
+						<h4 class="cv__skill-label">Tools</h4>
+						<div class="cv__skill-tags">
+							{skills.tools.map((tool) => <span class="cv__tag">{tool}</span>)}
+						</div>
+					</div>
+					<div class="cv__skill-group">
+						<h4 class="cv__skill-label">Relevant Experience</h4>
+						<div class="cv__skill-tags">
+							{skills.bonusExposure.map((item) => <span class="cv__tag cv__tag--highlight">{item}</span>)}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Courses -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Courses</h2>
+				<div class="cv__courses">
+					{
+						courses.map((course) => (
+							<div class="cv__course">
+								<div class="cv__course-info">
+									<h4 class="cv__course-name">{course.name}</h4>
+									<p class="cv__course-provider">{course.provider}</p>
+								</div>
+								<span class="cv__course-period">{course.period}</span>
+							</div>
+						))
+					}
+				</div>
+			</section>
+
+			<!-- Languages -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Languages</h2>
+				<div class="cv__skill-tags">
+					{languages.map((lang) => <span class="cv__tag">{lang}</span>)}
+				</div>
+			</section>
+
+			<!-- Hobbies -->
+			<section class="cv__section">
+				<h2 class="cv__section-title">Hobbies</h2>
+				<p class="cv__text">
+					I played in a band and organized recordings, concerts, and video shoots — experience coordinating complex projects with multiple stakeholders and tight deadlines.
+					Now, I continue working on music solo, releasing lo-fi tracks — perfect for focused working.
+					<a
+						href="https://linktr.ee/besidethepoint"
+						target="_blank"
+						rel="noreferrer"
+						class="cv__link">linktr.ee/besidethepoint</a
+					>
+				</p>
+			</section>
+
+			<!-- GDPR Consent -->
+			<footer class="cv__gdpr">
+				<p>I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).</p>
+			</footer>
+		</main>
+
+		<footer class="footer">
+			<div class="container footer__inner">
+				<p>© <span id="footerYear">{currentYear}</span> {name}</p>
+			</div>
+		</footer>
+
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.min.js"></script>
+		<script is:inline>
+			document.getElementById('downloadPdfBtn').addEventListener('click', function() {
+				const btn = this;
+				const btnText = document.getElementById('downloadBtnText');
+				const originalText = btnText.textContent;
+				
+				btnText.textContent = 'Generating...';
+				btn.disabled = true;
+				
+				const docDefinition = {
+					pageSize: 'A4',
+					pageMargins: [24, 24, 24, 24],
+					content: [
+						{ text: 'Mikalai Zaleski', style: 'name', margin: [0, 0, 0, 2] },
+						{ text: 'Project Manager', style: 'title', margin: [0, 0, 0, 4] },
+						{ text: 'EU citizen based in Warsaw — ready to start immediately. Available for B2B or direct hire.', style: 'highlight', margin: [0, 0, 0, 6] },
+						{
+							columns: [
+								{ text: 'Warsaw, Poland', style: 'contact' },
+								{ text: 'sidfender27@gmail.com', style: 'contact' },
+								{ text: '+48 537 001 362', style: 'contact' },
+								{ text: 'linkedin.com/in/mikalai-zaleski', style: 'contact', link: 'https://www.linkedin.com/in/mikalai-zaleski' }
+							],
+							columnGap: 6,
+							margin: [0, 0, 0, 10]
+						},
+						
+						{ text: 'PROFILE', style: 'sectionTitle' },
+						{ text: "Project Manager with 5+ years leading medium to large-scale implementation projects. Strong track record delivering on time, scope, and budget while managing multiple streams. Experience with greenfield and brownfield initiatives. Proficient with JIRA, Scrum/Agile. Skilled stakeholder management from C-level to junior. Servant leadership approach. Vendor management experience.", style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'WHY CLARITY', style: 'sectionTitle' },
+						{ text: "Clarity focuses on methodology and SOPs that bring real value — that's my approach to PM. I've spent years ensuring projects stay on track (time, scope, budget) while acting as liaison between stakeholders. I bring 5+ years project leadership, Scrum/Agile experience, vendor management, and an amicable personality that builds trust at every level. Excited to contribute to the PM Unit.", style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'PROFESSIONAL EXPERIENCE', style: 'sectionTitle' },
+						
+						{
+							columns: [
+								{ text: 'Product Manager → Project Manager', style: 'jobTitle', width: '*' },
+								{ text: 'Aug 2020 — Present', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 1]
+						},
+						{ text: 'Alconost Inc. — Tech / Localization / Implementation Services, Remote', style: 'company', margin: [0, 0, 0, 4] },
+						
+						{ text: 'AI Data Labeling Platform — Greenfield Implementation', style: 'projectName', margin: [0, 0, 0, 1] },
+						{ text: "Led greenfield implementation from scoping to delivery. Ensured on-track delivery (time, scope, budget). Liaison between all stakeholders. Tracked and reported data for management. Scrum methodology. Vendor management. Risk management throughout lifecycle.", style: 'body', margin: [0, 0, 0, 4] },
+						
+						{ text: 'Kraken App — Multi-Stream Project Coordination', style: 'projectName', margin: [0, 0, 0, 1] },
+						{ text: 'Managed multiple project streams simultaneously. Led cross-functional team with servant leadership. Juggled deadlines and budgets. JIRA for tracking and reporting. Contributed to internal process improvements.', style: 'body', margin: [0, 0, 0, 4] },
+						
+						{ text: 'Pikaban.com — Brownfield Optimization', style: 'projectName', margin: [0, 0, 0, 1] },
+						{ text: 'Led brownfield initiative with new integrations. Ensured methodology and SOPs followed. Managed contractual deliverables with vendors. Status reporting for client and management.', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{
+							columns: [
+								{ text: 'Business Development Manager', style: 'jobTitle', width: '*' },
+								{ text: 'Jun 2018 — Feb 2020', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 1]
+						},
+						{ text: 'Vispaniu — Travel Agency (Startup), Minsk', style: 'company', margin: [0, 0, 0, 4] },
+						{ text: 'Project leadership in startup. Kept deadlines and budgets. Liaison between vendors, partners, operations. Grew 7 to 80 monthly customers. Built SOPs delivering business value.', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{
+							columns: [
+								{ text: 'Operating Officer', style: 'jobTitle', width: '*' },
+								{ text: 'Jun 2015 — Jun 2018', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 1]
+						},
+						{ text: 'AtTheTop Hostels Group, Dubai', style: 'company', margin: [0, 0, 0, 4] },
+						{ text: 'Multi-platform implementation (Airbnb, Booking.com, Agoda, Expedia). Vendor management and contractual deliverables. Multiple project streams. Reporting for management. Multinational stakeholder coordination.', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'SIDE PROJECTS', style: 'sectionTitle' },
+						{ text: 'calmdown.space — Greenfield web app, full lifecycle management. ftns.space — Consumer app with iterative delivery and continuous improvement.', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'EDUCATION', style: 'sectionTitle' },
+						{
+							columns: [
+								{ text: 'Minsk Innovation University', style: 'jobTitle', width: '*' },
+								{ text: 'Sep 2010 — Jun 2015', style: 'period', alignment: 'right', width: 100 }
+							],
+							margin: [0, 0, 0, 1]
+						},
+						{ text: 'Bachelor degree in Programming, Minsk', style: 'company', margin: [0, 0, 0, 8] },
+						
+						{ text: 'SKILLS AND TOOLS', style: 'sectionTitle' },
+						{ text: 'PM: Project planning (time/scope/budget), Multi-stream coordination, Stakeholder management, Risk management, Scrum/Agile, Vendor management, Reporting, SOP development', style: 'body', margin: [0, 0, 0, 2] },
+						{ text: 'Tools: JIRA, Notion, MS Project (familiar), Confluence, Figma, GA4, Amplitude, GitHub, Slack, Miro', style: 'body', margin: [0, 0, 0, 2] },
+						{ text: 'Relevant: Greenfield & brownfield, SAP ecosystem (basic), Scrum framework, Servant leadership, Multinational environments', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'LANGUAGES', style: 'sectionTitle' },
+						{ text: 'English (Advanced — C1), Russian (Native), Polish (Intermediate), Spanish (Basic)', style: 'body', margin: [0, 0, 0, 8] },
+						
+						{ text: 'I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).', style: 'gdpr', margin: [0, 8, 0, 0] }
+					],
+				styles: {
+					name: {
+						fontSize: 20,
+						bold: true,
+						color: '#111111'
+					},
+					title: {
+						fontSize: 11,
+						color: '#666666'
+					},
+					highlight: {
+						fontSize: 8,
+						bold: true,
+						color: '#0369a1'
+					},
+					contact: {
+						fontSize: 7,
+						color: '#555555'
+					},
+					sectionTitle: {
+						fontSize: 9,
+						bold: true,
+						color: '#111111',
+						margin: [0, 6, 0, 4]
+					},
+					jobTitle: {
+						fontSize: 9,
+						bold: true,
+						color: '#111111'
+					},
+					company: {
+						fontSize: 8,
+						color: '#555555'
+					},
+					period: {
+						fontSize: 7,
+						color: '#666666'
+					},
+					projectName: {
+						fontSize: 8,
+						bold: true,
+						color: '#333333'
+					},
+					body: {
+						fontSize: 8,
+						color: '#333333',
+						lineHeight: 1.2
+					},
+					gdpr: {
+						fontSize: 6,
+						color: '#888888',
+						italics: true,
+						lineHeight: 1.3
+					}
+				},
+					defaultStyle: {
+						font: 'Roboto'
+					}
+				};
+				
+				try {
+					pdfMake.createPdf(docDefinition).download('Mikalai_Zaleski_PM_CV_Clarity.pdf');
+					btnText.textContent = originalText;
+					btn.disabled = false;
+				} catch (err) {
+					console.error('PDF generation failed:', err);
+					btnText.textContent = originalText;
+					btn.disabled = false;
+					alert('Failed to generate PDF. Please try again.');
+				}
+			});
+		</script>
+
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				font-family:
+					"Inter",
+					-apple-system,
+					BlinkMacSystemFont,
+					"Segoe UI",
+					Roboto,
+					sans-serif;
+				background: #ffffff;
+				color: #1a1a1a;
+				line-height: 1.6;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			.cv {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 40px 24px 60px;
+			}
+
+			.cv__nav {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 24px;
+			}
+
+			.back-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				font-size: 0.9rem;
+				color: #666;
+				transition: color 0.2s;
+			}
+
+			.back-link:hover {
+				color: #111;
+			}
+
+			.download-btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				padding: 10px 18px;
+				background: #111;
+				color: #fff;
+				border: none;
+				border-radius: 10px;
+				font-size: 0.9rem;
+				font-weight: 500;
+				cursor: pointer;
+				transition: background 0.2s, transform 0.2s, opacity 0.2s;
+			}
+
+			.download-btn:hover:not(:disabled) {
+				background: #333;
+				transform: translateY(-2px);
+			}
+
+			.download-btn:disabled {
+				opacity: 0.7;
+				cursor: wait;
+			}
+
+			/* Target Company Badge */
+			.cv__target-company {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 12px;
+				padding: 16px 24px;
+				background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+				border-radius: 12px;
+				margin-bottom: 12px;
+				border: 1px solid #dee2e6;
+			}
+
+			.cv__company-logo {
+				height: 40px;
+				width: auto;
+			}
+
+			.cv__target-company span {
+				font-size: 1rem;
+				font-weight: 500;
+				color: #495057;
+			}
+
+			/* Availability Notice */
+			.cv__availability {
+				text-align: center;
+				padding: 12px 24px;
+				background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+				border-radius: 10px;
+				margin-bottom: 32px;
+				border: 1px solid #fde68a;
+			}
+
+			.cv__availability p {
+				font-size: 0.9rem;
+				color: #92400e;
+				margin: 0;
+			}
+
+			/* Header */
+			.cv__header {
+				text-align: center;
+				margin-bottom: 48px;
+				padding-bottom: 32px;
+				border-bottom: 1px solid #eee;
+			}
+
+			.cv__photo {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				object-fit: cover;
+				margin-bottom: 16px;
+				border: 3px solid #f0f0f0;
+			}
+
+			.cv__name {
+				font-size: 2.5rem;
+				font-weight: 700;
+				letter-spacing: -0.03em;
+				color: #111;
+				margin-bottom: 4px;
+			}
+
+			.cv__title {
+				font-size: 1.25rem;
+				color: #666;
+				margin-bottom: 20px;
+			}
+
+			.cv__contact {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 16px 24px;
+			}
+
+			.cv__contact-item {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				font-size: 0.9rem;
+				color: #555;
+				transition: color 0.2s;
+			}
+
+			a.cv__contact-item:hover {
+				color: #111;
+			}
+
+			/* Sections */
+			.cv__section {
+				margin-bottom: 36px;
+			}
+
+			.cv__section-title {
+				font-size: 1.1rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				color: #111;
+				margin-bottom: 16px;
+				padding-bottom: 8px;
+				border-bottom: 2px solid #111;
+			}
+
+			.cv__text {
+				font-size: 0.95rem;
+				color: #333;
+				line-height: 1.7;
+			}
+
+			/* Motivation Section */
+			.cv__motivation {
+				background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+				padding: 24px;
+				border-radius: 12px;
+				border-left: 4px solid #0284c7;
+			}
+
+			.cv__motivation .cv__section-title {
+				border-bottom-color: #0284c7;
+				color: #0369a1;
+			}
+
+			/* Match Section */
+			.cv__match {
+				background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+				padding: 24px;
+				border-radius: 12px;
+				border-left: 4px solid #16a34a;
+			}
+
+			.cv__match .cv__section-title {
+				border-bottom-color: #16a34a;
+				color: #15803d;
+			}
+
+			.cv__match-grid {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+
+			.cv__match-item {
+				padding: 12px 16px;
+				background: rgba(255, 255, 255, 0.7);
+				border-radius: 8px;
+				border: 1px solid rgba(22, 163, 74, 0.15);
+			}
+
+			.cv__match-requirement {
+				font-size: 0.9rem;
+				font-weight: 600;
+				color: #15803d;
+				margin-bottom: 4px;
+			}
+
+			.cv__match-item .cv__text {
+				font-size: 0.9rem;
+				line-height: 1.5;
+			}
+
+			/* Jobs */
+			.cv__job {
+				margin-bottom: 28px;
+			}
+
+			.cv__job:last-child {
+				margin-bottom: 0;
+			}
+
+			.cv__job-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				gap: 16px;
+				margin-bottom: 12px;
+			}
+
+			.cv__job-title {
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: #111;
+			}
+
+			.cv__job-company {
+				font-size: 0.95rem;
+				color: #555;
+			}
+
+			.cv__job-company-desc {
+				color: #888;
+			}
+
+			.cv__job-period {
+				font-size: 0.85rem;
+				color: #666;
+				white-space: nowrap;
+				background: #f5f5f5;
+				padding: 4px 10px;
+				border-radius: 4px;
+			}
+
+			/* Projects */
+			.cv__projects {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+
+			.cv__project {
+				padding-left: 16px;
+				border-left: 2px solid #e5e5e5;
+			}
+
+			.cv__project-name {
+				font-size: 0.95rem;
+				font-weight: 600;
+				color: #333;
+				margin-bottom: 6px;
+			}
+
+			/* Skills */
+			.cv__skills {
+				display: flex;
+				flex-direction: column;
+				gap: 16px;
+			}
+
+			.cv__skill-group {
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+
+			.cv__skill-label {
+				font-size: 0.9rem;
+				font-weight: 600;
+				color: #333;
+			}
+
+			.cv__skill-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+			}
+
+			.cv__tag {
+				font-size: 0.85rem;
+				background: #f5f5f5;
+				color: #333;
+				padding: 6px 12px;
+				border-radius: 20px;
+			}
+
+			.cv__tag--highlight {
+				background: #dbeafe;
+				color: #1e40af;
+				font-weight: 500;
+			}
+
+			/* Courses */
+			.cv__courses {
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+			}
+
+			.cv__course {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 16px;
+			}
+
+			.cv__course-name {
+				font-size: 0.95rem;
+				font-weight: 600;
+				color: #333;
+			}
+
+			.cv__course-provider {
+				font-size: 0.85rem;
+				color: #666;
+			}
+
+			.cv__course-period {
+				font-size: 0.85rem;
+				color: #666;
+				white-space: nowrap;
+			}
+
+			/* Link */
+			.cv__link {
+				color: #111;
+				font-weight: 500;
+				border-bottom: 1px solid #ddd;
+				transition: border-color 0.2s;
+			}
+
+			.cv__link:hover {
+				border-color: #111;
+			}
+
+			/* GDPR Consent */
+			.cv__gdpr {
+				margin-top: 48px;
+				padding-top: 24px;
+				border-top: 1px solid #eee;
+			}
+
+			.cv__gdpr p {
+				font-size: 0.75rem;
+				color: #888;
+				line-height: 1.5;
+				font-style: italic;
+			}
+
+			/* Footer */
+			.footer {
+				padding: 32px 0;
+				border-top: 1px solid #eee;
+			}
+
+			.footer__inner {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 0 24px;
+				text-align: center;
+				color: #666;
+				font-size: 0.9rem;
+			}
+
+			/* Responsive */
+			@media (max-width: 600px) {
+				.cv__name {
+					font-size: 2rem;
+				}
+
+				.cv__job-header {
+					flex-direction: column;
+					gap: 8px;
+				}
+
+				.cv__job-period {
+					align-self: flex-start;
+				}
+
+				.cv__course {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 4px;
+				}
+
+				.cv__target-company {
+					flex-direction: column;
+					gap: 8px;
+				}
+			}
+
+			@media print {
+				.cv__nav {
+					display: none !important;
+				}
+
+				.cv {
+					padding: 0 !important;
+					max-width: 100% !important;
+				}
+
+				.cv__header {
+					margin-bottom: 24px !important;
+					padding-bottom: 16px !important;
+				}
+
+				.cv__section {
+					margin-bottom: 20px !important;
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__job {
+					margin-bottom: 16px !important;
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__project {
+					page-break-inside: avoid;
+					break-inside: avoid;
+				}
+
+				.cv__section-title {
+					margin-bottom: 10px !important;
+					padding-bottom: 6px !important;
+					page-break-after: avoid;
+					break-after: avoid;
+				}
+
+				.cv__text {
+					font-size: 0.9rem !important;
+					line-height: 1.5 !important;
+				}
+
+				.footer {
+					display: none !important;
+				}
+
+				.cv__motivation {
+					background: #f8f9fa !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__match {
+					background: #f8f9fa !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__match-item {
+					background: #ffffff !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__target-company {
+					background: #f8f9fa !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+
+				.cv__availability {
+					background: #fef3c7 !important;
+					-webkit-print-color-adjust: exact;
+					print-color-adjust: exact;
+				}
+			}
+		</style>
+	</body>
+</html>
