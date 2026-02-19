@@ -83,8 +83,41 @@ const description =
 		<meta property="og:title" content={`${name} — Portfolio`} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://nickzaleski.github.io/" />
-		<link rel="canonical" href="https://nickzaleski.github.io/" />
+		<meta property="og:url" content="https://nickzaleski.com/" />
+		<link rel="canonical" href="https://nickzaleski.com/" />
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "ProfilePage",
+			"mainEntity": {
+				"@type": "Person",
+				"name": "Mikalai Zaleski",
+				"alternateName": "Nick Zaleski",
+				"url": "https://nickzaleski.com",
+				"image": "https://nickzaleski.com/photo.png",
+				"jobTitle": "Product Manager",
+				"description": description,
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Warsaw",
+					"addressCountry": "PL"
+				},
+				"email": "sidfender27@gmail.com",
+				"sameAs": [
+					"https://www.linkedin.com/in/mikalai-zaleski/",
+					"https://open.spotify.com/artist/6he3fk5PW3nRh5OxCSCzPo",
+					"https://open.spotify.com/artist/4CAXqMctOawFnSQbi7dMo7"
+				],
+				"knowsLanguage": ["en", "ru", "pl", "es"],
+				"alumniOf": {
+					"@type": "EducationalOrganization",
+					"name": "Minsk Innovation University"
+				},
+				"worksFor": {
+					"@type": "Organization",
+					"name": "Alconost Inc."
+				}
+			}
+		})} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link

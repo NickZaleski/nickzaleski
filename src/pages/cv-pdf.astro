@@ -104,44 +104,6 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 			name="description"
 			content={`${name} - ${title}. ${profile.slice(0, 150)}...`}
 		/>
-		<link rel="canonical" href="https://nickzaleski.com/cv" />
-		<script type="application/ld+json" set:html={JSON.stringify({
-			"@context": "https://schema.org",
-			"@type": "Person",
-			"name": name,
-			"url": "https://nickzaleski.com",
-			"image": "https://nickzaleski.com/photo.png",
-			"jobTitle": title,
-			"description": profile,
-			"address": {
-				"@type": "PostalAddress",
-				"addressLocality": "Warsaw",
-				"addressCountry": "PL"
-			},
-			"email": contactInfo.email,
-			"telephone": contactInfo.phone,
-			"sameAs": [contactInfo.linkedin],
-			"knowsLanguage": languages.map(l => l.split(" ")[0]),
-			"alumniOf": {
-				"@type": "EducationalOrganization",
-				"name": education.institution,
-				"address": { "@type": "PostalAddress", "addressLocality": education.location }
-			},
-			"hasCredential": courses.map(c => ({
-				"@type": "EducationalOccupationalCredential",
-				"name": c.name,
-				"recognizedBy": { "@type": "Organization", "name": c.provider }
-			})),
-			"worksFor": {
-				"@type": "Organization",
-				"name": experience[0].company,
-				"description": experience[0].companyDesc
-			},
-			"knowsAbout": [
-				...skills.productManagement,
-				...skills.tools
-			]
-		})} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -151,47 +113,10 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 	</head>
 	<body>
 		<main class="cv">
-			<nav class="cv__nav">
-				<a href="/" class="back-link">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="20"
-						height="20"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					>
-						<path d="m15 18-6-6 6-6"></path>
-					</svg>
-					Back to Portfolio
-				</a>
-				<button id="downloadPdfBtn" class="download-btn">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="18"
-						height="18"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					>
-						<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-						<polyline points="7 10 12 15 17 10"></polyline>
-						<line x1="12" y1="15" x2="12" y2="3"></line>
-					</svg>
-					<span id="downloadBtnText">Download PDF</span>
-				</button>
-			</nav>
-
-		<!-- Header -->
-		<header class="cv__header">
-			<img src="/photo.png" alt={name} class="cv__photo" />
-			<h1 class="cv__name">{name}</h1>
+			<!-- Header -->
+			<header class="cv__header">
+				<img src="/photo.png" alt={name} class="cv__photo" />
+				<h1 class="cv__name">{name}</h1>
 				<p class="cv__title">{title}</p>
 				<div class="cv__contact">
 					<span class="cv__contact-item">
@@ -387,206 +312,6 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 			</div>
 		</footer>
 
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.min.js"></script>
-		<script is:inline>
-			document.getElementById('downloadPdfBtn').addEventListener('click', function() {
-				const btn = this;
-				const btnText = document.getElementById('downloadBtnText');
-				const originalText = btnText.textContent;
-				
-				// Show loading state
-				btnText.textContent = 'Generating...';
-				btn.disabled = true;
-				
-				const docDefinition = {
-					pageSize: 'A4',
-					pageMargins: [24, 24, 24, 24],
-					content: [
-						// Header
-						{ text: 'Mikalai Zaleski', style: 'name', margin: [0, 0, 0, 2] },
-						{ text: 'Product Manager', style: 'title', margin: [0, 0, 0, 6] },
-						{
-							columns: [
-								{ text: 'Warsaw, Poland', style: 'contact' },
-								{ text: 'sidfender27@gmail.com', style: 'contact' },
-								{ text: '+48 537 001 362', style: 'contact' },
-								{ text: 'linkedin.com/in/mikalai-zaleski', style: 'contact', link: 'https://www.linkedin.com/in/mikalai-zaleski' }
-							],
-							columnGap: 6,
-							margin: [0, 0, 0, 10]
-						},
-						
-						// Profile
-						{ text: 'PROFILE', style: 'sectionTitle' },
-						{ text: "I'm a data-driven Product Manager with 5+ years of experience in web applications. I work closely with design, development, and marketing teams, using data to guide decisions and improve products. I'm able to build a working prototype of the product within a few hours to validate ideas and gather early user feedback. I'm looking for new opportunities to work on new projects including roles outside of localization.", style: 'body', margin: [0, 0, 0, 8] },
-						
-						// Professional Experience
-						{ text: 'PROFESSIONAL EXPERIENCE', style: 'sectionTitle' },
-						
-						// Alconost
-						{
-							columns: [
-								{ text: 'Product Manager', style: 'jobTitle', width: '*' },
-								{ text: 'Aug 2020 — Present', style: 'period', alignment: 'right', width: 100 }
-							],
-							margin: [0, 0, 0, 1]
-						},
-						{ text: 'Alconost Inc. — Localization Company, Remote', style: 'company', margin: [0, 0, 0, 4] },
-						
-						{ text: 'Kraken App', style: 'projectName', margin: [0, 0, 0, 1] },
-						{ text: "Analyzed the marketing team's workflows and automated data collection and analysis from the App Store, Google Play, Steam, Nintendo, and Epic Games. Created a roadmap and backlog, built a small team (one designer and two developers), and together developed a web app that delivers insights, supports over three ABM campaigns per month, and increases lead generation.", style: 'body', margin: [0, 0, 0, 4] },
-						
-						{ text: 'multimedialabeling.com — AI Data Labeling Tool', style: 'projectName', margin: [0, 0, 0, 1] },
-						{ text: 'Built a full-stack platform to streamline AI training data collection and quality assurance. Features include multi-language audio recording, speaker qualification forms, automated quality scoring, and an admin dashboard for managing projects and submissions. Built with Lovable, Supabase, and Cursor. The tool helps scale AI data services by automating candidate screening, quality control, and multimedia dataset creation.', style: 'body', margin: [0, 0, 0, 4] },
-						
-						{ text: 'Alconost Website, alconost.com', style: 'projectName', margin: [0, 0, 0, 1] },
-						{ text: 'Analyzed user behavior through analytics and session recordings to find where we were losing users. Organized an international marketing team to pick design references and content for specific regions. Managed localization workflows via Crowdin and implemented AI translation with human post-editing review. The localized redesign helped increase conversions across target regions.', style: 'body', margin: [0, 0, 0, 4] },
-						
-						{ text: 'Alconost MT, alconost.mt', style: 'projectName', margin: [0, 0, 0, 1] },
-						{ text: "Developed alconost.mt, a web app that lets users evaluate translations using different LLMs. Built the roadmap, prioritized backlog of tasks and hypotheses, and aligned it with the CEO and CMO. Led design workshops, managed developers, and tested the product through release. After launch, improved it continuously using hypotheses, A/B and fake door tests, analytics, and customer feedback.", style: 'body', margin: [0, 0, 0, 4] },
-						
-						{ text: 'Marketing Activities', style: 'projectName', margin: [0, 0, 0, 1] },
-						{ text: 'Helped build Pikaban.com — a tool for scaling creatives and playable ads across Meta, Google, TikTok, and other ad networks. Also ran ABM campaigns for our services, which meant a lot of outreach emails and landing page experiments. Got the company ready for a gaming conference too — handled sponsorship stuff, print materials, and represented us at the event.', style: 'body', margin: [0, 0, 0, 4] },
-						
-						{ text: 'Budgeting & Unit Economics', style: 'projectName', margin: [0, 0, 0, 1] },
-						{ text: 'Worked with company executives on budgeting for products and marketing, and calculated unit economics.', style: 'body', margin: [0, 0, 0, 8] },
-						
-						// Vispaniu
-						{
-							columns: [
-								{ text: 'Business Development Manager', style: 'jobTitle', width: '*' },
-								{ text: 'Jun 2018 — Feb 2020', style: 'period', alignment: 'right', width: 100 }
-							],
-							margin: [0, 0, 0, 1]
-						},
-						{ text: 'Vispaniu — Travel Agency, Minsk', style: 'company', margin: [0, 0, 0, 4] },
-						{ text: 'Designed and developed a travel company website using Figma and Tilda. It allowed easy tour updates, online and offline sales, and more lead generation through web forms. This improved the sales workflow and expanded operations to new regions, growing from 7 to 80 monthly customers within a year. Also managed content creation, social media marketing, and Meta ad campaigns, and represented the company at industry conferences to negotiate better deals with hotel suppliers.', style: 'body', margin: [0, 0, 0, 8] },
-						
-						// AtTheTop
-						{
-							columns: [
-								{ text: 'Operating Officer', style: 'jobTitle', width: '*' },
-								{ text: 'Jun 2015 — Jun 2018', style: 'period', alignment: 'right', width: 100 }
-							],
-							margin: [0, 0, 0, 1]
-						},
-						{ text: 'AtTheTop Hostels Group, Dubai', style: 'company', margin: [0, 0, 0, 4] },
-						{ text: 'Optimized hotel operations by integrating the Cloudbeds channel management system, unifying listings across Airbnb, Booking.com, Agoda, and Expedia to reduce manual work and boost efficiency. Built a strong team by handling recruitment, interviews, and training, improving productivity and service quality. Enhanced guest experience through direct communication and personalized upsells, increasing satisfaction and repeat bookings.', style: 'body', margin: [0, 0, 0, 8] },
-						
-						// Education
-						{ text: 'EDUCATION', style: 'sectionTitle' },
-						{
-							columns: [
-								{ text: 'Minsk Innovation University', style: 'jobTitle', width: '*' },
-								{ text: 'Sep 2010 — Jun 2015', style: 'period', alignment: 'right', width: 100 }
-							],
-							margin: [0, 0, 0, 1]
-						},
-						{ text: 'Bachelor degree in Programming, Minsk', style: 'company', margin: [0, 0, 0, 8] },
-						
-						// Skills
-						{ text: 'SKILLS AND TOOLS', style: 'sectionTitle' },
-						{ text: 'Product Management: Agile product development, User research, Data-driven decision making, A/B and fake door tests', style: 'body', margin: [0, 0, 0, 2] },
-						{ text: 'Tools: GA4, Amplitude, Hotjar, Figma, Cursor, Antigravity, Replit, Xcode, AI prompt engineering', style: 'body', margin: [0, 0, 0, 8] },
-						
-						// Courses
-						{ text: 'COURSES', style: 'sectionTitle' },
-						{ text: 'UX/UI Design, Adukar (Dec 2019 — Feb 2020)', style: 'body', margin: [0, 0, 0, 1] },
-						{ text: 'Front-End, IT Academy (Dec 2020 — Feb 2021)', style: 'body', margin: [0, 0, 0, 1] },
-						{ text: 'Data-Driven Product Management, GoPractice Simulator (Jun 2022 — Aug 2025)', style: 'body', margin: [0, 0, 0, 8] },
-						
-						// Languages
-						{ text: 'LANGUAGES', style: 'sectionTitle' },
-						{ text: 'English (Advanced), Russian, Polish, Spanish', style: 'body', margin: [0, 0, 0, 8] },
-						
-						// Hobbies
-						{ text: 'HOBBIES', style: 'sectionTitle' },
-						{ text: "I played in a band and organized recordings, concerts, and video shoots. Now, I continue working on music solo, releasing lo-fi tracks — perfect for focused working. linktr.ee/besidethepoint", style: 'body', margin: [0, 0, 0, 10] },
-						
-						// Download note
-						{
-							text: [
-								{ text: 'This CV was downloaded from ', style: 'downloadNote' },
-								{ text: 'nickzaleski.com/cv', style: 'downloadLink', link: 'https://nickzaleski.com/cv' },
-								{ text: '. For the most up-to-date version, please visit the link and download again.', style: 'downloadNote' }
-							],
-							margin: [0, 0, 0, 0]
-						}
-					],
-				styles: {
-					name: {
-						fontSize: 20,
-						bold: true,
-						color: '#111111'
-					},
-					title: {
-						fontSize: 11,
-						color: '#666666'
-					},
-					contact: {
-						fontSize: 7,
-						color: '#555555'
-					},
-					sectionTitle: {
-						fontSize: 9,
-						bold: true,
-						color: '#111111',
-						margin: [0, 6, 0, 4]
-					},
-					jobTitle: {
-						fontSize: 9,
-						bold: true,
-						color: '#111111'
-					},
-					company: {
-						fontSize: 8,
-						color: '#555555'
-					},
-					period: {
-						fontSize: 7,
-						color: '#666666'
-					},
-					projectName: {
-						fontSize: 8,
-						bold: true,
-						color: '#333333'
-					},
-					body: {
-						fontSize: 8,
-						color: '#333333',
-						lineHeight: 1.2
-					},
-					downloadNote: {
-						fontSize: 7,
-						color: '#888888',
-						italics: true
-					},
-					downloadLink: {
-						fontSize: 7,
-						color: '#111111',
-						italics: true,
-						decoration: 'underline'
-					}
-				},
-					defaultStyle: {
-						font: 'Roboto'
-					}
-				};
-				
-				try {
-					pdfMake.createPdf(docDefinition).download('Mikalai_Zaleski_CV.pdf');
-					btnText.textContent = originalText;
-					btn.disabled = false;
-				} catch (err) {
-					console.error('PDF generation failed:', err);
-					btnText.textContent = originalText;
-					btn.disabled = false;
-					alert('Failed to generate PDF. Please try again.');
-				}
-			});
-		</script>
-
 		<style>
 			* {
 				box-sizing: border-box;
@@ -621,51 +346,6 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 				max-width: 800px;
 				margin: 0 auto;
 				padding: 40px 24px 60px;
-			}
-
-			.cv__nav {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				margin-bottom: 32px;
-			}
-
-			.back-link {
-				display: inline-flex;
-				align-items: center;
-				gap: 6px;
-				font-size: 0.9rem;
-				color: #666;
-				transition: color 0.2s;
-			}
-
-			.back-link:hover {
-				color: #111;
-			}
-
-			.download-btn {
-				display: inline-flex;
-				align-items: center;
-				gap: 8px;
-				padding: 10px 18px;
-				background: #111;
-				color: #fff;
-				border: none;
-				border-radius: 10px;
-				font-size: 0.9rem;
-				font-weight: 500;
-				cursor: pointer;
-				transition: background 0.2s, transform 0.2s, opacity 0.2s;
-			}
-
-			.download-btn:hover:not(:disabled) {
-				background: #333;
-				transform: translateY(-2px);
-			}
-
-			.download-btn:disabled {
-				opacity: 0.7;
-				cursor: wait;
 			}
 
 			/* Header */
@@ -915,10 +595,6 @@ const languages = ["English (Advanced)", "Russian", "Polish", "Spanish"];
 			}
 
 			@media print {
-				.cv__nav {
-					display: none !important;
-				}
-
 				.cv {
 					padding: 0 !important;
 					max-width: 100% !important;
