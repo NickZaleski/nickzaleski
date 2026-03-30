@@ -1,0 +1,1061 @@
+---
+const name = "Nick Zaleski";
+const currentYear = new Date().getFullYear();
+
+const TELEGRAM_URL = "https://t.me/nickzaleski";
+const LINKEDIN_URL = "https://www.linkedin.com/in/mikalai-zaleski/";
+const EMAIL = "sidfender27@gmail.com";
+
+
+const horizontalVideos = [
+	{ id: "tr5ITanJx8E", title: "Yulia Kay horizontal 1" },
+	{ id: "lkKePDBW5jQ", title: "Yulia Kay horizontal 2" },
+	{ id: "LpaoZ79mN_4", title: "Yulia Kay horizontal 3" },
+	{ id: "R869cJ8Bs9k", title: "Yulia Kay horizontal 4" },
+	{ id: "EqyD8mXs8ok", title: "Yulia Kay horizontal 5" },
+	{ id: "nZyLyELaLKs", title: "Yulia Kay horizontal 6" },
+];
+
+const verticalVideosSource = [
+	{ id: "FVe_xhUvwak", title: "Vocal Image vertical 1" },
+	{ id: "R31adM4F_Ws", title: "Vocal Image vertical 2" },
+	{ id: "BEd5CAUKsSQ", title: "Vocal Image vertical 3" },
+	{ id: "Y6x2xUt3p5M", title: "Vocal Image vertical 4" },
+	{ id: "wlIatVEgtJI", title: "Vocal Image vertical 5" },
+	{ id: "m5uJ9wOtyfo", title: "Vocal Image vertical 6" },
+	{ id: "nTYbE0SpFp4", title: "Vocal Image vertical 7" },
+	{ id: "QGndcr9HGkU", title: "Vocal Image vertical 8" },
+	{ id: "GvRqNgCAPgU", title: "Vocal Image vertical 9" },
+	{ id: "Dyr7uSyp9CM", title: "Vocal Image vertical 10" },
+	{ id: "2QVlN9o76JQ", title: "Vocal Image vertical 11" },
+	{ id: "3PiZj4iUYvM", title: "Vocal Image vertical 12" },
+	{ id: "t65Qx-uZTNo", title: "Vocal Image vertical 13" },
+	{ id: "Vet_lEYDCyY", title: "Vertical 14" },
+	{ id: "mHcJlPM-C60", title: "Vertical 15" },
+	{ id: "g34hv5DKLOc", title: "Vertical 16" },
+];
+
+const verticalVideos = [...verticalVideosSource].sort(() => Math.random() - 0.5);
+
+const description =
+	"Your content, edited and ready to post. Short-form video editing for YouTube, TikTok, and Instagram — up to 40 videos/month for €1,000.";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Video Editing — {name}</title>
+		<meta name="description" content={description} />
+		<meta property="og:title" content={`Video Editing — ${name}`} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta name="theme-color" content="#0a0a0a" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="header" id="header">
+			<div class="header__top">
+				<a href="/" class="header__brand">{name}</a>
+				<div class="header__links">
+					<a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" class="header__link">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+						</svg>
+						Telegram
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="hero__glow" aria-hidden="true"></div>
+				<div class="container">
+					<span class="hero__eyebrow">Video editing for creators and brands</span>
+					<h1 class="hero__title">Your content, edited<br />and ready to post</h1>
+					<p class="hero__subtitle">
+						I handle the cuts, captions, and polish for YouTube, TikTok, and Instagram — so you can publish more and grow faster.
+					</p>
+					<div class="hero__actions">
+						<a href="#contact-form" class="hero__cta">Get started</a>
+						<a href="#examples" class="hero__cta hero__cta--ghost">See examples</a>
+					</div>
+
+					<div class="pricing__grid">
+						<div class="pricing__card pricing__card--featured">
+							<span class="pricing__badge">Best value</span>
+							<h2 class="pricing__plan">Monthly retainer</h2>
+							<div class="pricing__price">€1,000<span class="pricing__unit">/mo</span></div>
+							<ul class="pricing__features">
+								<li>
+									Up to 40 videos per month
+									<span class="tooltip">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+										<span class="tooltip__text">9:16 + resize to 4:5 (Meta)<br/>or 16:9 + resize to 9:16</span>
+									</span>
+								</li>
+								<li><strong>€25 per video</strong> · up to 60 sec each</li>
+							</ul>
+							<a href="#contact-form" class="pricing__cta">Get started</a>
+						</div>
+						<div class="pricing__card">
+							<h2 class="pricing__plan">On demand</h2>
+							<div class="pricing__price">€30<span class="pricing__unit">/video</span></div>
+							<ul class="pricing__features">
+								<li>Pay as you go, no commitment</li>
+								<li>Up to 60 seconds per video</li>
+							</ul>
+							<a href="#contact-form" class="pricing__cta pricing__cta--outline">Get in touch</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="examples" id="examples">
+				<div class="container">
+					<h2 class="section__title">Examples</h2>
+
+					<h3 class="examples__heading">Yulia Kay, horizontal videos (Youtube, X.com)</h3>
+					<div class="examples__grid">
+						{horizontalVideos.map((v) => (
+							<div class="examples__item">
+								<div class="examples__ratio">
+									<iframe
+										title={v.title}
+										src={`https://www.youtube.com/embed/${v.id}`}
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin"
+										allowfullscreen
+										loading="lazy"
+									/>
+								</div>
+							</div>
+						))}
+					</div>
+
+					<h3 class="examples__heading examples__heading--vertical">Vertical videos (Vocal Image, Antischool, Labaratorium Pani Domu)</h3>
+				</div>
+
+				<div class="vcarousel">
+					<div class="vcarousel__track">
+						{verticalVideos.map((v) => (
+							<div class="vcarousel__item">
+								<iframe
+									title={v.title}
+									src={`https://www.youtube.com/embed/${v.id}`}
+									frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									referrerpolicy="strict-origin-when-cross-origin"
+									allowfullscreen
+									loading="lazy"
+								/>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section class="practices">
+				<div class="container">
+					<h2 class="section__title">What you get</h2>
+					<div class="practices__grid">
+						<div class="practices__card" style="--accent: 140, 160, 255;">
+							<div class="practices__icon-wrap">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+							</div>
+							<h3 class="practices__card-title">Platform-correct tech specs</h3>
+							<p class="practices__card-desc">Exported to exact specs for YouTube, TikTok, Instagram, and Shorts.</p>
+						</div>
+						<div class="practices__card" style="--accent: 130, 220, 190;">
+							<div class="practices__icon-wrap">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+							</div>
+							<h3 class="practices__card-title">Safe zones respected</h3>
+							<p class="practices__card-desc">Text, captions, and key visuals always clear of platform UI overlays.</p>
+						</div>
+						<div class="practices__card" style="--accent: 255, 180, 120;">
+							<div class="practices__icon-wrap">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+							</div>
+							<h3 class="practices__card-title">Captions &amp; subtitles</h3>
+							<p class="practices__card-desc">Styled, timed captions that boost retention and accessibility.</p>
+						</div>
+						<div class="practices__card" style="--accent: 200, 140, 255;">
+							<div class="practices__icon-wrap">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+							</div>
+							<h3 class="practices__card-title">Engaging pacing &amp; transitions</h3>
+							<p class="practices__card-desc">Snappy cuts, smooth transitions, and rhythm that keeps viewers watching.</p>
+						</div>
+						<div class="practices__card" style="--accent: 255, 130, 160;">
+							<div class="practices__icon-wrap">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+							</div>
+							<h3 class="practices__card-title">Color correction &amp; audio cleanup</h3>
+							<p class="practices__card-desc">Balanced color grading, noise removal, and leveled audio throughout.</p>
+						</div>
+						<div class="practices__card" style="--accent: 100, 200, 255;">
+							<div class="practices__icon-wrap">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+							</div>
+							<h3 class="practices__card-title">Fast turnaround</h3>
+							<p class="practices__card-desc">Quick delivery so you can post consistently and stay on schedule.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact-section" id="contact-form">
+				<div class="container">
+					<h2 class="section__title">Get in touch</h2>
+					<p class="section__subtitle">Describe your project and I'll get back to you shortly.</p>
+					<form class="contact-form" id="contactForm">
+						<div class="form__row">
+							<div class="form__field">
+								<label for="form-name">Name</label>
+								<input type="text" id="form-name" name="name" required autocomplete="name" placeholder="Your name" />
+							</div>
+							<div class="form__field">
+								<label for="form-email">Email</label>
+								<input type="email" id="form-email" name="email" required autocomplete="email" placeholder="you@example.com" />
+							</div>
+						</div>
+						<div class="form__field form__field--full">
+							<label for="form-desc">Description</label>
+							<textarea id="form-desc" name="description" required placeholder="Tell me about your project — how many videos, what platform, any specific style..." rows="4"></textarea>
+						</div>
+						<div class="form__bottom">
+							<label class="form__consent">
+								<input type="checkbox" name="consent" required />
+								<span>I agree to be contacted about this request</span>
+							</label>
+							<button type="submit" class="form__submit" id="formSubmit">Send request</button>
+						</div>
+						<p class="form__status" id="formStatus"></p>
+					</form>
+				</div>
+			</section>
+
+			<section class="bottom-cta">
+				<div class="container">
+					<h2 class="bottom-cta__title">Ready to start?</h2>
+					<p class="bottom-cta__text">Fill in the form above or reach out directly.</p>
+					<div class="bottom-cta__links">
+						<a href="#contact-form" class="pricing__cta">Go to form</a>
+						<a href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer" class="pricing__cta pricing__cta--outline">Telegram</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<p>&copy; <span id="footerYear">{currentYear}</span> {name}</p>
+			</div>
+		</footer>
+
+		<script is:inline>
+			(() => {
+				const y = new Date().getFullYear();
+				const el = document.getElementById("footerYear");
+				if (el) el.textContent = String(y);
+
+				const form = document.getElementById("contactForm");
+				const btn = document.getElementById("formSubmit");
+				const status = document.getElementById("formStatus");
+				if (!form || !btn || !status) return;
+
+				form.addEventListener("submit", async (e) => {
+					e.preventDefault();
+					btn.disabled = true;
+					btn.textContent = "Sending…";
+					status.textContent = "";
+					status.className = "form__status";
+
+					const fd = new FormData(form);
+					const payload = {
+						name: fd.get("name"),
+						email: fd.get("email"),
+						description: fd.get("description"),
+					};
+
+					try {
+						const res = await fetch("/api/contact", {
+							method: "POST",
+							headers: { "Content-Type": "application/json" },
+							body: JSON.stringify(payload),
+						});
+						const data = await res.json();
+						if (data.ok) {
+							status.textContent = "Message sent! I'll get back to you soon.";
+							status.classList.add("form__status--ok");
+							form.reset();
+						} else {
+							status.textContent = data.error || "Something went wrong. Please try again.";
+							status.classList.add("form__status--err");
+						}
+					} catch {
+						status.textContent = "Network error. Please try again.";
+						status.classList.add("form__status--err");
+					} finally {
+						btn.disabled = false;
+						btn.textContent = "Send request";
+					}
+				});
+			})();
+		</script>
+
+		<style>
+			* { box-sizing: border-box; margin: 0; padding: 0; }
+
+			html { scroll-behavior: smooth; }
+
+			body {
+				font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+				background: #0a0a0a;
+				color: #f0f0f0;
+				line-height: 1.6;
+				-webkit-font-smoothing: antialiased;
+			}
+
+			a { color: inherit; text-decoration: none; }
+
+			.container {
+				max-width: 1100px;
+				margin: 0 auto;
+				padding: 0 24px;
+			}
+
+			/* Header — contacts only */
+			.header {
+				position: sticky;
+				top: 0;
+				z-index: 100;
+				background: rgba(10, 10, 10, 0.92);
+				backdrop-filter: blur(12px);
+				border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+				padding: 14px 24px;
+			}
+
+			.header__top {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				max-width: 1100px;
+				margin: 0 auto;
+			}
+
+			.header__brand {
+				font-weight: 700;
+				font-size: 1rem;
+				color: #f0f0f0;
+				transition: opacity 0.2s;
+			}
+
+			.header__brand:hover { opacity: 0.7; }
+
+			.header__links {
+				display: flex;
+				gap: 16px;
+			}
+
+			.header__link {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				padding: 8px 14px;
+				border-radius: 8px;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				font-size: 0.875rem;
+				font-weight: 500;
+				color: #f0f0f0;
+				transition: background 0.2s, border-color 0.2s;
+			}
+
+			.header__link:hover {
+				background: rgba(255, 255, 255, 0.08);
+				border-color: rgba(255, 255, 255, 0.25);
+			}
+
+			@media (max-width: 700px) {
+				.header__top { flex-direction: column; gap: 12px; align-items: flex-start; }
+			}
+
+			/* Hero */
+			.hero {
+				position: relative;
+				padding: 100px 0 80px;
+				text-align: center;
+				overflow: hidden;
+			}
+
+			.hero__glow {
+				position: absolute;
+				top: -40%;
+				left: 50%;
+				translate: -50% 0;
+				width: 900px;
+				height: 600px;
+				background: radial-gradient(ellipse at center, rgba(120, 140, 255, 0.12) 0%, rgba(120, 140, 255, 0) 70%);
+				pointer-events: none;
+				z-index: 0;
+			}
+
+			.hero .container {
+				position: relative;
+				z-index: 1;
+			}
+
+			.hero__eyebrow {
+				display: inline-block;
+				font-size: 0.8rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: rgba(160, 175, 255, 0.8);
+				background: rgba(140, 160, 255, 0.1);
+				border: 1px solid rgba(140, 160, 255, 0.15);
+				padding: 6px 18px;
+				border-radius: 100px;
+				margin-bottom: 28px;
+			}
+
+			.hero__title {
+				font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+				font-weight: 800;
+				letter-spacing: -0.03em;
+				line-height: 1.08;
+				margin-bottom: 20px;
+				background: linear-gradient(180deg, #ffffff 40%, rgba(255, 255, 255, 0.55) 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.hero__subtitle {
+				font-size: clamp(1.1rem, 2vw, 1.35rem);
+				color: rgba(255, 255, 255, 0.55);
+				max-width: 600px;
+				margin: 0 auto;
+				line-height: 1.55;
+			}
+
+			.hero__actions {
+				display: flex;
+				gap: 14px;
+				justify-content: center;
+				margin-top: 36px;
+				margin-bottom: 64px;
+			}
+
+			.hero__cta {
+				display: inline-flex;
+				align-items: center;
+				padding: 14px 30px;
+				border-radius: 12px;
+				font-size: 0.95rem;
+				font-weight: 600;
+				background: #fff;
+				color: #0a0a0a;
+				transition: opacity 0.2s, transform 0.2s;
+			}
+
+			.hero__cta:hover {
+				opacity: 0.9;
+				transform: translateY(-1px);
+			}
+
+			.hero__cta--ghost {
+				background: transparent;
+				color: rgba(255, 255, 255, 0.7);
+				border: 1px solid rgba(255, 255, 255, 0.15);
+			}
+
+			.hero__cta--ghost:hover {
+				border-color: rgba(255, 255, 255, 0.35);
+				color: #fff;
+				opacity: 1;
+			}
+
+			@media (max-width: 500px) {
+				.hero__actions { flex-direction: column; align-items: center; }
+			}
+
+			/* Pricing */
+			.pricing__grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 20px;
+			}
+
+			@media (max-width: 700px) {
+				.pricing__grid { grid-template-columns: 1fr; }
+			}
+
+			.pricing__card {
+				background: rgba(255, 255, 255, 0.035);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				border-radius: 20px;
+				padding: 36px 32px;
+				position: relative;
+				transition: border-color 0.3s, background 0.3s;
+			}
+
+			.pricing__card:hover {
+				border-color: rgba(255, 255, 255, 0.16);
+				background: rgba(255, 255, 255, 0.05);
+			}
+
+			.pricing__card--featured {
+				border-color: rgba(140, 160, 255, 0.3);
+				background: rgba(140, 160, 255, 0.06);
+				box-shadow:
+					0 0 30px rgba(140, 160, 255, 0.08),
+					0 0 80px rgba(140, 160, 255, 0.05),
+					inset 0 0 60px rgba(140, 160, 255, 0.03);
+			}
+
+			.pricing__card--featured:hover {
+				border-color: rgba(140, 160, 255, 0.45);
+				background: rgba(140, 160, 255, 0.09);
+				box-shadow:
+					0 0 40px rgba(140, 160, 255, 0.12),
+					0 0 100px rgba(140, 160, 255, 0.07),
+					0 0 160px rgba(140, 160, 255, 0.04),
+					inset 0 0 80px rgba(140, 160, 255, 0.04);
+			}
+
+			.pricing__badge {
+				position: absolute;
+				top: -11px;
+				left: 32px;
+				background: linear-gradient(135deg, #a0afff, #c4b5fd);
+				color: #0a0a0a;
+				font-size: 0.7rem;
+				font-weight: 700;
+				padding: 4px 14px;
+				border-radius: 100px;
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+			}
+
+			.pricing__plan {
+				font-size: 1.1rem;
+				font-weight: 600;
+				margin-bottom: 12px;
+				color: rgba(255, 255, 255, 0.6);
+			}
+
+			.pricing__price {
+				font-size: clamp(2.5rem, 4vw, 3.25rem);
+				font-weight: 800;
+				letter-spacing: -0.03em;
+				margin-bottom: 20px;
+			}
+
+			.pricing__features {
+				list-style: none;
+				padding: 0;
+				margin: 0 0 24px;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			.pricing__features li {
+				font-size: 0.95rem;
+				color: rgba(255, 255, 255, 0.5);
+				line-height: 1.45;
+			}
+
+			.tooltip {
+				position: relative;
+				display: inline-flex;
+				align-items: center;
+				vertical-align: middle;
+				margin-left: 4px;
+				cursor: help;
+				color: rgba(255, 255, 255, 0.35);
+				transition: color 0.2s;
+			}
+
+			.tooltip:hover {
+				color: rgba(255, 255, 255, 0.7);
+			}
+
+			.tooltip__text {
+				display: none;
+				position: absolute;
+				bottom: calc(100% + 10px);
+				left: 50%;
+				translate: -50% 0;
+				background: #1a1a2e;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				color: rgba(255, 255, 255, 0.75);
+				font-size: 0.8rem;
+				font-weight: 400;
+				line-height: 1.5;
+				padding: 10px 14px;
+				border-radius: 10px;
+				white-space: nowrap;
+				z-index: 10;
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+			}
+
+			.tooltip__text::after {
+				content: "";
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				translate: -50% 0;
+				border: 6px solid transparent;
+				border-top-color: #1a1a2e;
+			}
+
+			.tooltip:hover .tooltip__text {
+				display: block;
+			}
+
+			.pricing__features li strong {
+				color: rgba(255, 255, 255, 0.8);
+			}
+
+			.pricing__unit {
+				font-size: 0.95rem;
+				font-weight: 500;
+				color: rgba(255, 255, 255, 0.4);
+			}
+
+			.pricing__cta {
+				display: inline-block;
+				margin-top: auto;
+				padding: 13px 28px;
+				background: #fff;
+				color: #0a0a0a;
+				border-radius: 10px;
+				font-size: 0.95rem;
+				font-weight: 700;
+				transition: opacity 0.2s, transform 0.2s;
+			}
+
+			.pricing__cta:hover {
+				opacity: 0.88;
+				transform: translateY(-1px);
+			}
+
+			.pricing__cta--outline {
+				background: transparent;
+				color: #f0f0f0;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+			}
+
+			.pricing__cta--outline:hover {
+				border-color: rgba(255, 255, 255, 0.45);
+				opacity: 1;
+			}
+
+			/* Section titles */
+			.section__title {
+				font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+				font-weight: 800;
+				letter-spacing: -0.02em;
+				margin-bottom: 12px;
+			}
+
+			.section__subtitle {
+				font-size: 1.1rem;
+				color: rgba(255, 255, 255, 0.5);
+				margin-bottom: 40px;
+			}
+
+			/* Practices */
+			.practices {
+				padding: 80px 0;
+				border-top: 1px solid rgba(255, 255, 255, 0.06);
+			}
+
+			.practices .section__title {
+				text-align: center;
+				margin-bottom: 48px;
+			}
+
+			.practices__grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 20px;
+			}
+
+			@media (max-width: 900px) {
+				.practices__grid { grid-template-columns: repeat(2, 1fr); }
+			}
+
+			@media (max-width: 550px) {
+				.practices__grid { grid-template-columns: 1fr; gap: 16px; }
+			}
+
+			.practices__card {
+				--accent: 140, 160, 255;
+				position: relative;
+				background: rgba(var(--accent), 0.03);
+				border: 1px solid rgba(var(--accent), 0.1);
+				border-radius: 20px;
+				padding: 32px 28px;
+				transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+				overflow: hidden;
+			}
+
+			.practices__card::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 3px;
+				background: linear-gradient(90deg, rgba(var(--accent), 0.6), rgba(var(--accent), 0.1));
+				opacity: 0;
+				transition: opacity 0.3s;
+			}
+
+			.practices__card::after {
+				content: "";
+				position: absolute;
+				top: -60px;
+				right: -60px;
+				width: 140px;
+				height: 140px;
+				border-radius: 50%;
+				background: radial-gradient(circle, rgba(var(--accent), 0.08) 0%, transparent 70%);
+				pointer-events: none;
+				transition: opacity 0.3s;
+				opacity: 0;
+			}
+
+			.practices__card:hover {
+				transform: translateY(-4px);
+				border-color: rgba(var(--accent), 0.25);
+				box-shadow:
+					0 12px 40px rgba(var(--accent), 0.08),
+					0 4px 12px rgba(0, 0, 0, 0.2);
+			}
+
+			.practices__card:hover::before,
+			.practices__card:hover::after {
+				opacity: 1;
+			}
+
+			.practices__icon-wrap {
+				width: 48px;
+				height: 48px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 14px;
+				background: rgba(var(--accent), 0.1);
+				color: rgba(var(--accent), 1);
+				margin-bottom: 20px;
+				transition: background 0.3s, box-shadow 0.3s;
+			}
+
+			.practices__card:hover .practices__icon-wrap {
+				background: rgba(var(--accent), 0.15);
+				box-shadow: 0 0 20px rgba(var(--accent), 0.15);
+			}
+
+			.practices__card-title {
+				font-size: 1.1rem;
+				font-weight: 700;
+				color: #f0f0f0;
+				margin-bottom: 10px;
+				letter-spacing: -0.01em;
+			}
+
+			.practices__card-desc {
+				font-size: 0.9rem;
+				line-height: 1.6;
+				color: rgba(255, 255, 255, 0.45);
+			}
+
+			/* Examples */
+			.examples {
+				padding: 80px 0;
+				border-top: 1px solid rgba(255, 255, 255, 0.06);
+			}
+
+			.examples__heading {
+				font-size: 1.15rem;
+				font-weight: 600;
+				color: rgba(255, 255, 255, 0.55);
+				margin-bottom: 20px;
+				margin-top: 8px;
+			}
+
+			.examples__heading--vertical {
+				margin-top: 48px;
+			}
+
+			.examples__grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 24px;
+			}
+
+			@media (max-width: 700px) {
+				.examples__grid { grid-template-columns: 1fr; }
+			}
+
+			.examples__item {
+				border-radius: 14px;
+				overflow: hidden;
+				background: rgba(255, 255, 255, 0.04);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+			}
+
+			.examples__ratio {
+				position: relative;
+				padding-top: 56.25%;
+			}
+
+			.examples__ratio iframe {
+				position: absolute;
+				inset: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			/* Vertical video carousel */
+			.vcarousel {
+				width: 100%;
+				overflow-x: auto;
+				overflow-y: hidden;
+				-webkit-overflow-scrolling: touch;
+				scrollbar-width: thin;
+				scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+			}
+
+			.vcarousel::-webkit-scrollbar {
+				height: 6px;
+			}
+
+			.vcarousel::-webkit-scrollbar-track {
+				background: transparent;
+			}
+
+			.vcarousel::-webkit-scrollbar-thumb {
+				background: rgba(255, 255, 255, 0.15);
+				border-radius: 3px;
+			}
+
+			.vcarousel__track {
+				display: flex;
+				gap: 14px;
+				justify-content: center;
+				padding: 0 24px 16px;
+				width: max-content;
+				min-width: 100%;
+			}
+
+			.vcarousel__item {
+				flex: 0 0 200px;
+				height: 356px;
+				border-radius: 14px;
+				overflow: hidden;
+				background: rgba(255, 255, 255, 0.04);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+			}
+
+			.vcarousel__item iframe {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+
+			@media (max-width: 480px) {
+				.vcarousel__item {
+					flex: 0 0 160px;
+					height: 284px;
+				}
+			}
+
+			/* Contact form section */
+			.contact-section {
+				padding: 80px 0;
+				border-top: 1px solid rgba(255, 255, 255, 0.06);
+			}
+
+			.contact-section .section__title,
+			.contact-section .section__subtitle {
+				max-width: 700px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.contact-form {
+				max-width: 700px;
+				margin: 0 auto;
+			}
+
+			.form__row {
+				display: flex;
+				gap: 12px;
+				flex-wrap: wrap;
+				margin-bottom: 16px;
+			}
+
+			.form__field {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+				min-width: 140px;
+				flex: 1;
+			}
+
+			.form__field--full {
+				margin-bottom: 16px;
+			}
+
+			.form__field label {
+				font-size: 0.75rem;
+				font-weight: 600;
+				color: rgba(255, 255, 255, 0.5);
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+			}
+
+			.form__field input,
+			.form__field textarea {
+				background: rgba(255, 255, 255, 0.06);
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				border-radius: 8px;
+				padding: 10px 12px;
+				color: #f0f0f0;
+				font-size: 0.9rem;
+				font-family: inherit;
+				transition: border-color 0.2s;
+				resize: vertical;
+			}
+
+			.form__field input::placeholder,
+			.form__field textarea::placeholder {
+				color: rgba(255, 255, 255, 0.3);
+			}
+
+			.form__field input:focus,
+			.form__field textarea:focus {
+				outline: none;
+				border-color: rgba(255, 255, 255, 0.4);
+			}
+
+			.form__bottom {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 16px;
+				flex-wrap: wrap;
+			}
+
+			.form__consent {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				font-size: 0.8rem;
+				color: rgba(255, 255, 255, 0.55);
+				cursor: pointer;
+			}
+
+			.form__consent input[type="checkbox"] {
+				width: 16px;
+				height: 16px;
+				accent-color: #fff;
+				cursor: pointer;
+			}
+
+			.form__submit {
+				background: #fff;
+				color: #0a0a0a;
+				border: none;
+				border-radius: 8px;
+				padding: 12px 28px;
+				font-size: 0.95rem;
+				font-weight: 600;
+				font-family: inherit;
+				cursor: pointer;
+				transition: opacity 0.2s, transform 0.2s;
+			}
+
+			.form__submit:hover {
+				opacity: 0.88;
+				transform: translateY(-1px);
+			}
+
+			.form__submit:disabled {
+				opacity: 0.5;
+				cursor: not-allowed;
+				transform: none;
+			}
+
+			.form__status {
+				margin-top: 16px;
+				font-size: 0.95rem;
+				min-height: 1.4em;
+			}
+
+			.form__status--ok {
+				color: #6fcf97;
+			}
+
+			.form__status--err {
+				color: #f87171;
+			}
+
+			@media (max-width: 700px) {
+				.form__row { flex-direction: column; }
+				.form__bottom { flex-direction: column; align-items: flex-start; }
+			}
+
+			/* Bottom CTA */
+			.bottom-cta {
+				padding: 80px 0;
+				text-align: center;
+				border-top: 1px solid rgba(255, 255, 255, 0.06);
+			}
+
+			.bottom-cta__title {
+				font-size: clamp(2rem, 4vw, 3rem);
+				font-weight: 800;
+				letter-spacing: -0.02em;
+				margin-bottom: 12px;
+			}
+
+			.bottom-cta__text {
+				font-size: 1.15rem;
+				color: rgba(255, 255, 255, 0.5);
+				margin-bottom: 32px;
+			}
+
+			.bottom-cta__links {
+				display: flex;
+				gap: 16px;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			/* Footer */
+			.footer {
+				padding: 32px 0;
+				border-top: 1px solid rgba(255, 255, 255, 0.06);
+				text-align: center;
+				color: rgba(255, 255, 255, 0.35);
+				font-size: 0.9rem;
+			}
+		</style>
+	</body>
+</html>
